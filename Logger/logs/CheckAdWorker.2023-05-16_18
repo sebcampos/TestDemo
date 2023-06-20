@@ -1,0 +1,72 @@
+[34;20m2023-05-16 17:59:57,402 - CheckAdWorker - DEBUG - setting progress bar size to 12[0m
+[31;20m2023-05-16 18:00:13,884 - CheckAdWorker - ERROR - [Errno 2] No such file or directory: '/Users/sebash/PycharmProjects/MetaAndGoogleAppV2/ProcessData/ProcessData/process-metadata.json'[0m
+[34;20m2023-05-16 18:01:16,575 - CheckAdWorker - DEBUG - setting progress bar size to 12[0m
+[35;20m2023-05-16 18:01:38,600 - CheckAdWorker - WARNING - charm name MYK Silk no ad found[0m
+[35;20m2023-05-16 18:01:50,414 - CheckAdWorker - WARNING - facebook name myksilkofficial not found[0m
+[35;20m2023-05-16 18:02:17,634 - CheckAdWorker - WARNING - charm name NSLC no ad found[0m
+[35;20m2023-05-16 18:02:38,531 - CheckAdWorker - WARNING - facebook name NSLC-100430641500449 not found[0m
+[35;20m2023-05-16 18:03:34,691 - CheckAdWorker - WARNING - charm name Perfect Plants no ad found[0m
+[35;20m2023-05-16 18:03:47,499 - CheckAdWorker - WARNING - facebook name perfectplantsnursery not found[0m
+[35;20m2023-05-16 18:05:23,697 - CheckAdWorker - WARNING - charm name Naaahratlanta no ad found[0m
+[35;20m2023-05-16 18:05:36,563 - CheckAdWorker - WARNING - facebook name naaahratl not found[0m
+[35;20m2023-05-16 18:05:58,366 - CheckAdWorker - WARNING - charm name Naked Wardrobe no ad found[0m
+[35;20m2023-05-16 18:06:11,170 - CheckAdWorker - WARNING - facebook name nakedwardrobe not found[0m
+[35;20m2023-05-16 18:06:59,330 - CheckAdWorker - WARNING - charm name Namecheap no ad found[0m
+[35;20m2023-05-16 18:07:17,011 - CheckAdWorker - WARNING - facebook name namecheap not found[0m
+[35;20m2023-05-16 18:07:45,888 - CheckAdWorker - WARNING - charm name Nanak Foods no ad found[0m
+[35;20m2023-05-16 18:07:58,927 - CheckAdWorker - WARNING - facebook name nanakfoods not found[0m
+[34;20m2023-05-16 18:07:59,141 - CheckAdWorker - DEBUG - spreadsheet: Test sheetname: Sheet1 rowcount: 12[0m
+[34;20m2023-05-16 18:08:03,000 - CheckAdWorker - DEBUG - {
+  "spreadsheetId": "1lOSaVFsA1xJunMMARwUSdI3ERD_MV4nV50ZH0zLYcGc",
+  "totalUpdatedRows": 13,
+  "totalUpdatedColumns": 6,
+  "totalUpdatedCells": 78,
+  "totalUpdatedSheets": 1,
+  "responses": [
+    {
+      "spreadsheetId": "1lOSaVFsA1xJunMMARwUSdI3ERD_MV4nV50ZH0zLYcGc",
+      "updatedRange": "Sheet1!A1:F13",
+      "updatedRows": 13,
+      "updatedColumns": 6,
+      "updatedCells": 78
+    }
+  ]
+}
+[0m
+[34;20m2023-05-16 18:08:03,000 - CheckAdWorker - DEBUG - removing files[0m
+[34;20m2023-05-16 18:25:26,755 - CheckAdWorker - DEBUG - setting progress bar size to 12[0m
+[35;20m2023-05-16 18:25:47,355 - CheckAdWorker - WARNING - charm name MYK Silk no ad found[0m
+[35;20m2023-05-16 18:26:00,277 - CheckAdWorker - WARNING - facebook name myksilkofficial not found[0m
+[35;20m2023-05-16 18:26:23,749 - CheckAdWorker - WARNING - charm name NSLC no ad found[0m
+[35;20m2023-05-16 18:26:39,799 - CheckAdWorker - WARNING - facebook name NSLC-100430641500449 not found[0m
+[35;20m2023-05-16 18:27:45,635 - CheckAdWorker - WARNING - charm name Perfect Plants no ad found[0m
+[35;20m2023-05-16 18:28:00,896 - CheckAdWorker - WARNING - facebook name perfectplantsnursery not found[0m
+[35;20m2023-05-16 18:28:27,578 - CheckAdWorker - WARNING - charm name Mypillow no ad found[0m
+[35;20m2023-05-16 18:28:47,297 - CheckAdWorker - WARNING - facebook name mypillow not found[0m
+[35;20m2023-05-16 18:30:09,802 - CheckAdWorker - WARNING - charm name Naaahratlanta no ad found[0m
+[35;20m2023-05-16 18:30:23,972 - CheckAdWorker - WARNING - facebook name naaahratl not found[0m
+[35;20m2023-05-16 18:31:10,703 - CheckAdWorker - WARNING - charm name Nambé no ad found[0m
+[35;20m2023-05-16 18:31:23,230 - CheckAdWorker - WARNING - facebook name nambeusa not found[0m
+[35;20m2023-05-16 18:31:51,520 - CheckAdWorker - WARNING - charm name Namecheap no ad found[0m
+[35;20m2023-05-16 18:32:05,217 - CheckAdWorker - WARNING - facebook name namecheap not found[0m
+[35;20m2023-05-16 18:32:32,948 - CheckAdWorker - WARNING - charm name Nanak Foods no ad found[0m
+[35;20m2023-05-16 18:32:47,418 - CheckAdWorker - WARNING - facebook name nanakfoods not found[0m
+[34;20m2023-05-16 18:32:47,529 - CheckAdWorker - DEBUG - spreadsheet: Test sheetname: Sheet1 rowcount: 12[0m
+[34;20m2023-05-16 18:32:51,262 - CheckAdWorker - DEBUG - {
+  "spreadsheetId": "1lOSaVFsA1xJunMMARwUSdI3ERD_MV4nV50ZH0zLYcGc",
+  "totalUpdatedRows": 13,
+  "totalUpdatedColumns": 6,
+  "totalUpdatedCells": 78,
+  "totalUpdatedSheets": 1,
+  "responses": [
+    {
+      "spreadsheetId": "1lOSaVFsA1xJunMMARwUSdI3ERD_MV4nV50ZH0zLYcGc",
+      "updatedRange": "Sheet1!A1:F13",
+      "updatedRows": 13,
+      "updatedColumns": 6,
+      "updatedCells": 78
+    }
+  ]
+}
+[0m
+[34;20m2023-05-16 18:32:51,262 - CheckAdWorker - DEBUG - removing files[0m

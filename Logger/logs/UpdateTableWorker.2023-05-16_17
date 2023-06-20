@@ -1,0 +1,12 @@
+[34;20m2023-05-16 17:56:13,598 - UpdateTableWorker - DEBUG - <client.google.GoogleClient object at 0x106e39410>[0m
+[34;20m2023-05-16 17:56:13,599 - UpdateTableWorker - DEBUG - Charm.io Links[0m
+[34;20m2023-05-16 17:56:13,599 - UpdateTableWorker - DEBUG - Sheet1[0m
+[34;20m2023-05-16 17:56:18,649 - UpdateTableWorker - DEBUG - <client.google.GoogleClient object at 0x106e39410>[0m
+[34;20m2023-05-16 17:56:18,650 - UpdateTableWorker - DEBUG - Test[0m
+[34;20m2023-05-16 17:56:18,650 - UpdateTableWorker - DEBUG - Sheet1[0m
+[34;20m2023-05-16 18:08:03,025 - UpdateTableWorker - DEBUG - <client.google.GoogleClient object at 0x10fc8d590>[0m
+[34;20m2023-05-16 18:08:03,026 - UpdateTableWorker - DEBUG - Test[0m
+[34;20m2023-05-16 18:08:03,026 - UpdateTableWorker - DEBUG - Sheet1[0m
+[34;20m2023-05-16 18:32:51,267 - UpdateTableWorker - DEBUG - <client.google.GoogleClient object at 0x10fc8d590>[0m
+[34;20m2023-05-16 18:32:51,268 - UpdateTableWorker - DEBUG - Test[0m
+[34;20m2023-05-16 18:32:51,268 - UpdateTableWorker - DEBUG - Sheet1[0m

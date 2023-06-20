@@ -1,0 +1,80 @@
+[34;20m2023-05-16 09:40:44,298 - CheckAdWorker - DEBUG - spreadsheet: TestSheet sheetname: Sheet3 rowcount: 4[0m
+[34;20m2023-05-16 09:40:46,641 - CheckAdWorker - DEBUG - {
+  "spreadsheetId": "1QaS8F9Cbpaf0L0GyqA4B8A_h_8xvJ5ERYNVyRjyxcs8",
+  "totalUpdatedRows": 5,
+  "totalUpdatedColumns": 6,
+  "totalUpdatedCells": 30,
+  "totalUpdatedSheets": 1,
+  "responses": [
+    {
+      "spreadsheetId": "1QaS8F9Cbpaf0L0GyqA4B8A_h_8xvJ5ERYNVyRjyxcs8",
+      "updatedRange": "Sheet3!A1:F5",
+      "updatedRows": 5,
+      "updatedColumns": 6,
+      "updatedCells": 30
+    }
+  ]
+}
+[0m
+[34;20m2023-05-16 09:40:46,641 - CheckAdWorker - DEBUG - removing files[0m
+[34;20m2023-05-16 09:46:46,289 - CheckAdWorker - DEBUG - spreadsheet: TestSheet sheetname: Sheet3 rowcount: 4[0m
+[34;20m2023-05-16 09:46:48,121 - CheckAdWorker - DEBUG - {
+  "spreadsheetId": "1QaS8F9Cbpaf0L0GyqA4B8A_h_8xvJ5ERYNVyRjyxcs8",
+  "totalUpdatedRows": 5,
+  "totalUpdatedColumns": 6,
+  "totalUpdatedCells": 30,
+  "totalUpdatedSheets": 1,
+  "responses": [
+    {
+      "spreadsheetId": "1QaS8F9Cbpaf0L0GyqA4B8A_h_8xvJ5ERYNVyRjyxcs8",
+      "updatedRange": "Sheet3!A1:F5",
+      "updatedRows": 5,
+      "updatedColumns": 6,
+      "updatedCells": 30
+    }
+  ]
+}
+[0m
+[34;20m2023-05-16 09:46:48,122 - CheckAdWorker - DEBUG - removing files[0m
+[34;20m2023-05-16 09:58:39,595 - CheckAdWorker - DEBUG - spreadsheet: TestSheet sheetname: Sheet3 rowcount: 4[0m
+[34;20m2023-05-16 09:58:41,208 - CheckAdWorker - DEBUG - {
+  "spreadsheetId": "1QaS8F9Cbpaf0L0GyqA4B8A_h_8xvJ5ERYNVyRjyxcs8",
+  "totalUpdatedRows": 5,
+  "totalUpdatedColumns": 6,
+  "totalUpdatedCells": 30,
+  "totalUpdatedSheets": 1,
+  "responses": [
+    {
+      "spreadsheetId": "1QaS8F9Cbpaf0L0GyqA4B8A_h_8xvJ5ERYNVyRjyxcs8",
+      "updatedRange": "Sheet3!A1:F5",
+      "updatedRows": 5,
+      "updatedColumns": 6,
+      "updatedCells": 30
+    }
+  ]
+}
+[0m
+[34;20m2023-05-16 09:58:41,208 - CheckAdWorker - DEBUG - removing files[0m
+[35;20m2023-05-16 09:59:40,077 - CheckAdWorker - WARNING - charm name Ace Industries, Inc. no ad found[0m
+[35;20m2023-05-16 09:59:51,768 - CheckAdWorker - WARNING - facebook name aceindustries not found[0m
+[35;20m2023-05-16 10:00:09,660 - CheckAdWorker - WARNING - charm name ACE School of Tomorrow no ad found[0m
+[35;20m2023-05-16 10:00:21,916 - CheckAdWorker - WARNING - facebook name acecurriculum not found[0m
+[34;20m2023-05-16 10:00:46,053 - CheckAdWorker - DEBUG - spreadsheet: TestSheet sheetname: Sheet3 rowcount: 4[0m
+[34;20m2023-05-16 10:00:47,552 - CheckAdWorker - DEBUG - {
+  "spreadsheetId": "1QaS8F9Cbpaf0L0GyqA4B8A_h_8xvJ5ERYNVyRjyxcs8",
+  "totalUpdatedRows": 5,
+  "totalUpdatedColumns": 6,
+  "totalUpdatedCells": 30,
+  "totalUpdatedSheets": 1,
+  "responses": [
+    {
+      "spreadsheetId": "1QaS8F9Cbpaf0L0GyqA4B8A_h_8xvJ5ERYNVyRjyxcs8",
+      "updatedRange": "Sheet3!A1:F5",
+      "updatedRows": 5,
+      "updatedColumns": 6,
+      "updatedCells": 30
+    }
+  ]
+}
+[0m
+[34;20m2023-05-16 10:00:47,553 - CheckAdWorker - DEBUG - removing files[0m

@@ -1,0 +1,33 @@
+[34;20m2023-05-16 21:05:47,291 - scraping-test - DEBUG - [0m
+[34;20m2023-05-16 21:26:50,287 - scraping-test - DEBUG - 502 Bad Gateway
+ProtocolException('Server connection to (\'34.66.32.241\', 31280) failed: Error connecting to "34.66.32.241": [Errno 61] Connection refused')[0m
+[34;20m2023-05-16 21:29:25,933 - scraping-test - DEBUG - http://proxyuser:jklfogajkl3dio043@34.66.32.241:31280[0m
+[34;20m2023-05-16 21:29:28,068 - scraping-test - DEBUG - 502 Bad Gateway
+ProtocolException('Server connection to (\'34.66.32.241\', 31280) failed: Error connecting to "34.66.32.241": [Errno 61] Connection refused')[0m
+[34;20m2023-05-16 21:32:14,623 - scraping-test - DEBUG - http://proxyuser:jklfogajkl3dio043@34.66.32.241:31280[0m
+[34;20m2023-05-16 21:32:33,246 - scraping-test - DEBUG - 502 Bad Gateway
+ProtocolException('Server connection to (\'34.66.32.241\', 31280) failed: Error connecting to "34.66.32.241": [Errno 60] Operation timed out')[0m
+[34;20m2023-05-16 21:33:06,107 - scraping-test - DEBUG - http://proxyuser:jklfogajkl3dio043@34.66.32.241:31280[0m
+[34;20m2023-05-16 21:33:24,565 - scraping-test - DEBUG - 502 Bad Gateway
+ProtocolException('Server connection to (\'34.66.32.241\', 31280) failed: Error connecting to "34.66.32.241": [Errno 60] Operation timed out')[0m
+[34;20m2023-05-16 21:35:41,966 - scraping-test - DEBUG - http://proxyuser:jklfogajkl3dio043@34.66.32.241:31280[0m
+[34;20m2023-05-16 21:36:00,186 - scraping-test - DEBUG - 502 Bad Gateway
+ProtocolException('Server connection to (\'34.66.32.241\', 31280) failed: Error connecting to "34.66.32.241": [Errno 60] Operation timed out')[0m
+[34;20m2023-05-16 22:07:08,204 - scraping-test - DEBUG - http://proxyuser:jklfogajkl3dio043@34.66.32.241:31280[0m
+[34;20m2023-05-16 22:07:21,334 - scraping-test - DEBUG - {
+  "origin": "67.188.228.229, 34.66.32.241"
+}[0m
+[34;20m2023-05-16 22:16:30,658 - scraping-test - DEBUG - http://proxyuser:jklfogajkl3dio043@34.66.32.241:31280[0m
+[34;20m2023-05-16 22:16:32,782 - scraping-test - DEBUG - 502 Bad Gateway
+ProtocolException('Server connection to (\'34.66.32.241\', 3128) failed: Error connecting to "34.66.32.241": [Errno 61] Connection refused')[0m
+[34;20m2023-05-16 22:16:39,134 - scraping-test - DEBUG - http://proxyuser:jklfogajkl3dio043@34.66.32.241:31280[0m
+[34;20m2023-05-16 22:16:41,036 - scraping-test - DEBUG - 502 Bad Gateway
+ProtocolException('Server connection to (\'34.66.32.241\', 3128) failed: Error connecting to "34.66.32.241": [Errno 61] Connection refused')[0m
+[34;20m2023-05-16 22:17:12,477 - scraping-test - DEBUG - http://proxyuser:jklfogajkl3dio043@34.66.32.241:31280[0m
+[34;20m2023-05-16 22:17:15,734 - scraping-test - DEBUG - {
+  "origin": "34.66.32.241"
+}[0m
+[34;20m2023-05-16 22:21:53,777 - scraping-test - DEBUG - http://proxyuser:jklfogajkl3dio043@34.66.32.241:31280[0m
+[34;20m2023-05-16 22:21:57,306 - scraping-test - DEBUG - {
+  "origin": "34.66.32.241"
+}[0m

@@ -1,0 +1,30 @@
+[34;20m2023-05-17 01:56:29,864 - UpdateTableWorker - DEBUG - <client.google.GoogleClient object at 0x10ccc6810>[0m
+[34;20m2023-05-17 01:56:29,865 - UpdateTableWorker - DEBUG - Charm.io Links[0m
+[34;20m2023-05-17 01:56:29,865 - UpdateTableWorker - DEBUG - Sheet1[0m
+[34;20m2023-05-17 01:59:50,330 - UpdateTableWorker - DEBUG - <client.google.GoogleClient object at 0x11967aa10>[0m
+[34;20m2023-05-17 01:59:50,330 - UpdateTableWorker - DEBUG - Charm.io Links[0m
+[34;20m2023-05-17 01:59:50,330 - UpdateTableWorker - DEBUG - Sheet1[0m
+[34;20m2023-05-17 02:03:51,440 - UpdateTableWorker - DEBUG - <client.google.GoogleClient object at 0x110e2a4d0>[0m
+[34;20m2023-05-17 02:03:51,440 - UpdateTableWorker - DEBUG - Charm.io Links[0m
+[34;20m2023-05-17 02:03:51,440 - UpdateTableWorker - DEBUG - Sheet1[0m
+[34;20m2023-05-17 02:05:32,975 - UpdateTableWorker - DEBUG - <client.google.GoogleClient object at 0x117baead0>[0m
+[34;20m2023-05-17 02:05:32,975 - UpdateTableWorker - DEBUG - Charm.io Links[0m
+[34;20m2023-05-17 02:05:32,975 - UpdateTableWorker - DEBUG - Sheet1[0m
+[34;20m2023-05-18 10:18:59,373 - UpdateTableWorker - DEBUG - <client.google.GoogleClient object at 0x109615bd0>[0m
+[34;20m2023-05-18 10:18:59,373 - UpdateTableWorker - DEBUG - Test 123[0m
+[34;20m2023-05-18 10:18:59,373 - UpdateTableWorker - DEBUG - Sheet2[0m
+[34;20m2023-05-18 10:19:09,012 - UpdateTableWorker - DEBUG - <client.google.GoogleClient object at 0x109615bd0>[0m
+[34;20m2023-05-18 10:19:09,012 - UpdateTableWorker - DEBUG - Test 123[0m
+[34;20m2023-05-18 10:19:09,012 - UpdateTableWorker - DEBUG - Test_05/17[0m
+[34;20m2023-05-18 10:41:50,085 - UpdateTableWorker - DEBUG - <client.google.GoogleClient object at 0x103b0dbd0>[0m
+[34;20m2023-05-18 10:41:50,085 - UpdateTableWorker - DEBUG - Test 123[0m
+[34;20m2023-05-18 10:41:50,085 - UpdateTableWorker - DEBUG - Test_05/17[0m
+[34;20m2023-05-18 11:02:25,757 - UpdateTableWorker - DEBUG - <client.google.GoogleClient object at 0x11077da90>[0m
+[34;20m2023-05-18 11:02:25,757 - UpdateTableWorker - DEBUG - Test 123[0m
+[34;20m2023-05-18 11:02:25,757 - UpdateTableWorker - DEBUG - Test_05/17[0m
+[34;20m2023-05-18 12:01:27,024 - UpdateTableWorker - DEBUG - <client.google.GoogleClient object at 0x109b3e110>[0m
+[34;20m2023-05-18 12:01:27,025 - UpdateTableWorker - DEBUG - Test 123[0m
+[34;20m2023-05-18 12:01:27,025 - UpdateTableWorker - DEBUG - Test_05/17[0m
+[34;20m2023-05-18 12:15:18,873 - UpdateTableWorker - DEBUG - <client.google.GoogleClient object at 0x107f120d0>[0m
+[34;20m2023-05-18 12:15:18,873 - UpdateTableWorker - DEBUG - Test 123[0m
+[34;20m2023-05-18 12:15:18,873 - UpdateTableWorker - DEBUG - Test_05/17[0m

@@ -1,0 +1,226 @@
+[31;20m2023-05-15 23:14:18,461 - CheckAdWorker - ERROR - Message: 
+Stacktrace:
+0   chromedriver                        0x00000001079ec598 chromedriver + 4973976
+1   chromedriver                        0x00000001079e3913 chromedriver + 4938003
+2   chromedriver                        0x00000001075a0cd6 chromedriver + 470230
+3   chromedriver                        0x00000001075e42ff chromedriver + 746239
+4   chromedriver                        0x00000001075e4591 chromedriver + 746897
+5   chromedriver                        0x0000000107626384 chromedriver + 1016708
+6   chromedriver                        0x00000001076089ed chromedriver + 895469
+7   chromedriver                        0x0000000107623856 chromedriver + 1005654
+8   chromedriver                        0x0000000107608793 chromedriver + 894867
+9   chromedriver                        0x00000001075d621f chromedriver + 688671
+10  chromedriver                        0x00000001075d756e chromedriver + 693614
+11  chromedriver                        0x00000001079a6bb7 chromedriver + 4688823
+12  chromedriver                        0x00000001079aba51 chromedriver + 4708945
+13  chromedriver                        0x00000001079b240f chromedriver + 4736015
+14  chromedriver                        0x00000001079ac91a chromedriver + 4712730
+15  chromedriver                        0x000000010797f87c chromedriver + 4528252
+16  chromedriver                        0x00000001079cbf28 chromedriver + 4841256
+17  chromedriver                        0x00000001079cc0a7 chromedriver + 4841639
+18  chromedriver                        0x00000001079dd28f chromedriver + 4911759
+19  libsystem_pthread.dylib             0x00007ff800c6f1d3 _pthread_start + 125
+20  libsystem_pthread.dylib             0x00007ff800c6abd3 thread_start + 15
+[0m
+[31;20m2023-05-15 23:17:03,406 - CheckAdWorker - ERROR - Message: 
+Stacktrace:
+0   chromedriver                        0x000000010b79e598 chromedriver + 4973976
+1   chromedriver                        0x000000010b795913 chromedriver + 4938003
+2   chromedriver                        0x000000010b352cd6 chromedriver + 470230
+3   chromedriver                        0x000000010b3962ff chromedriver + 746239
+4   chromedriver                        0x000000010b396591 chromedriver + 746897
+5   chromedriver                        0x000000010b3d8384 chromedriver + 1016708
+6   chromedriver                        0x000000010b3ba9ed chromedriver + 895469
+7   chromedriver                        0x000000010b3d5856 chromedriver + 1005654
+8   chromedriver                        0x000000010b3ba793 chromedriver + 894867
+9   chromedriver                        0x000000010b38821f chromedriver + 688671
+10  chromedriver                        0x000000010b38956e chromedriver + 693614
+11  chromedriver                        0x000000010b758bb7 chromedriver + 4688823
+12  chromedriver                        0x000000010b75da51 chromedriver + 4708945
+13  chromedriver                        0x000000010b76440f chromedriver + 4736015
+14  chromedriver                        0x000000010b75e91a chromedriver + 4712730
+15  chromedriver                        0x000000010b73187c chromedriver + 4528252
+16  chromedriver                        0x000000010b77df28 chromedriver + 4841256
+17  chromedriver                        0x000000010b77e0a7 chromedriver + 4841639
+18  chromedriver                        0x000000010b78f28f chromedriver + 4911759
+19  libsystem_pthread.dylib             0x00007ff800c6f1d3 _pthread_start + 125
+20  libsystem_pthread.dylib             0x00007ff800c6abd3 thread_start + 15
+[0m
+[35;20m2023-05-15 23:17:29,288 - CheckAdWorker - WARNING - charm name Look Human no ad found[0m
+[35;20m2023-05-15 23:17:37,068 - CheckAdWorker - WARNING - facebook name lookhuman not found[0m
+[31;20m2023-05-15 23:20:00,525 - CheckAdWorker - ERROR - Message: 
+Stacktrace:
+0   chromedriver                        0x00000001067ab598 chromedriver + 4973976
+1   chromedriver                        0x00000001067a2913 chromedriver + 4938003
+2   chromedriver                        0x000000010635fcd6 chromedriver + 470230
+3   chromedriver                        0x00000001063a32ff chromedriver + 746239
+4   chromedriver                        0x00000001063a3591 chromedriver + 746897
+5   chromedriver                        0x00000001063e5384 chromedriver + 1016708
+6   chromedriver                        0x00000001063c79ed chromedriver + 895469
+7   chromedriver                        0x00000001063e2856 chromedriver + 1005654
+8   chromedriver                        0x00000001063c7793 chromedriver + 894867
+9   chromedriver                        0x000000010639521f chromedriver + 688671
+10  chromedriver                        0x000000010639656e chromedriver + 693614
+11  chromedriver                        0x0000000106765bb7 chromedriver + 4688823
+12  chromedriver                        0x000000010676aa51 chromedriver + 4708945
+13  chromedriver                        0x000000010677140f chromedriver + 4736015
+14  chromedriver                        0x000000010676b91a chromedriver + 4712730
+15  chromedriver                        0x000000010673e87c chromedriver + 4528252
+16  chromedriver                        0x000000010678af28 chromedriver + 4841256
+17  chromedriver                        0x000000010678b0a7 chromedriver + 4841639
+18  chromedriver                        0x000000010679c28f chromedriver + 4911759
+19  libsystem_pthread.dylib             0x00007ff800c6f1d3 _pthread_start + 125
+20  libsystem_pthread.dylib             0x00007ff800c6abd3 thread_start + 15
+[0m
+[31;20m2023-05-15 23:20:32,734 - CheckAdWorker - ERROR - Message: 
+Stacktrace:
+0   chromedriver                        0x000000010eca9598 chromedriver + 4973976
+1   chromedriver                        0x000000010eca0913 chromedriver + 4938003
+2   chromedriver                        0x000000010e85dcd6 chromedriver + 470230
+3   chromedriver                        0x000000010e8a12ff chromedriver + 746239
+4   chromedriver                        0x000000010e8a1591 chromedriver + 746897
+5   chromedriver                        0x000000010e8e3384 chromedriver + 1016708
+6   chromedriver                        0x000000010e8c59ed chromedriver + 895469
+7   chromedriver                        0x000000010e8e0856 chromedriver + 1005654
+8   chromedriver                        0x000000010e8c5793 chromedriver + 894867
+9   chromedriver                        0x000000010e89321f chromedriver + 688671
+10  chromedriver                        0x000000010e89456e chromedriver + 693614
+11  chromedriver                        0x000000010ec63bb7 chromedriver + 4688823
+12  chromedriver                        0x000000010ec68a51 chromedriver + 4708945
+13  chromedriver                        0x000000010ec6f40f chromedriver + 4736015
+14  chromedriver                        0x000000010ec6991a chromedriver + 4712730
+15  chromedriver                        0x000000010ec3c87c chromedriver + 4528252
+16  chromedriver                        0x000000010ec88f28 chromedriver + 4841256
+17  chromedriver                        0x000000010ec890a7 chromedriver + 4841639
+18  chromedriver                        0x000000010ec9a28f chromedriver + 4911759
+19  libsystem_pthread.dylib             0x00007ff800c6f1d3 _pthread_start + 125
+20  libsystem_pthread.dylib             0x00007ff800c6abd3 thread_start + 15
+[0m
+[35;20m2023-05-15 23:20:51,810 - CheckAdWorker - WARNING - charm name Lovetreefashion no ad found[0m
+[35;20m2023-05-15 23:21:04,029 - CheckAdWorker - WARNING - facebook name lovetreefashion not found[0m
+[35;20m2023-05-15 23:21:21,698 - CheckAdWorker - WARNING - charm name Lowellfarms no ad found[0m
+[35;20m2023-05-15 23:21:33,987 - CheckAdWorker - WARNING - facebook name lowell-herb-co-308789796287272 not found[0m
+[35;20m2023-05-15 23:21:52,717 - CheckAdWorker - WARNING - charm name Lowlandsgroup no ad found[0m
+[35;20m2023-05-15 23:22:04,742 - CheckAdWorker - WARNING - facebook name lowlandsgrandcafes not found[0m
+[35;20m2023-05-15 23:22:27,198 - CheckAdWorker - WARNING - charm name Lowlaundry no ad found[0m
+[35;20m2023-05-15 23:22:38,976 - CheckAdWorker - WARNING - facebook name LaundryOwnersWarehouse not found[0m
+[31;20m2023-05-15 23:22:50,706 - CheckAdWorker - ERROR - Message: 
+Stacktrace:
+0   chromedriver                        0x0000000104475598 chromedriver + 4973976
+1   chromedriver                        0x000000010446c913 chromedriver + 4938003
+2   chromedriver                        0x0000000104029cd6 chromedriver + 470230
+3   chromedriver                        0x000000010406d2ff chromedriver + 746239
+4   chromedriver                        0x000000010406d591 chromedriver + 746897
+5   chromedriver                        0x00000001040af384 chromedriver + 1016708
+6   chromedriver                        0x00000001040919ed chromedriver + 895469
+7   chromedriver                        0x00000001040ac856 chromedriver + 1005654
+8   chromedriver                        0x0000000104091793 chromedriver + 894867
+9   chromedriver                        0x000000010405f21f chromedriver + 688671
+10  chromedriver                        0x000000010406056e chromedriver + 693614
+11  chromedriver                        0x000000010442fbb7 chromedriver + 4688823
+12  chromedriver                        0x0000000104434a51 chromedriver + 4708945
+13  chromedriver                        0x000000010443b40f chromedriver + 4736015
+14  chromedriver                        0x000000010443591a chromedriver + 4712730
+15  chromedriver                        0x000000010440887c chromedriver + 4528252
+16  chromedriver                        0x0000000104454f28 chromedriver + 4841256
+17  chromedriver                        0x00000001044550a7 chromedriver + 4841639
+18  chromedriver                        0x000000010446628f chromedriver + 4911759
+19  libsystem_pthread.dylib             0x00007ff800c6f1d3 _pthread_start + 125
+20  libsystem_pthread.dylib             0x00007ff800c6abd3 thread_start + 15
+[0m
+[34;20m2023-05-15 23:23:26,232 - CheckAdWorker - DEBUG - Kill CALLED[0m
+[35;20m2023-05-15 23:23:28,129 - CheckAdWorker - WARNING - charm name Lucky Shot USA no ad found[0m
+[35;20m2023-05-15 23:23:40,445 - CheckAdWorker - WARNING - facebook name luckyshotusa not found[0m
+[34;20m2023-05-15 23:23:40,503 - CheckAdWorker - DEBUG - CLOSED[0m
+[35;20m2023-05-15 23:32:06,745 - CheckAdWorker - WARNING - charm name 1A Auto Parts no ad found[0m
+[35;20m2023-05-15 23:32:18,441 - CheckAdWorker - WARNING - facebook name 1AAuto not found[0m
+[35;20m2023-05-15 23:32:36,925 - CheckAdWorker - WARNING - charm name 1Sale no ad found[0m
+[35;20m2023-05-15 23:32:43,080 - CheckAdWorker - WARNING - facebook name 1saleaday not found[0m
+[35;20m2023-05-15 23:33:08,012 - CheckAdWorker - WARNING - charm name 1Stclasshumidors no ad found[0m
+[35;20m2023-05-15 23:33:19,857 - CheckAdWorker - WARNING - facebook name 1stclasshumidors not found[0m
+[35;20m2023-05-15 23:34:21,106 - CheckAdWorker - WARNING - charm name 21Savage no ad found[0m
+[35;20m2023-05-15 23:34:32,887 - CheckAdWorker - WARNING - facebook name 21savage not found[0m
+[35;20m2023-05-15 23:35:53,560 - CheckAdWorker - WARNING - charm name 2Modern no ad found[0m
+[35;20m2023-05-15 23:36:05,706 - CheckAdWorker - WARNING - facebook name 2modern not found[0m
+[35;20m2023-05-15 23:39:24,490 - CheckAdWorker - WARNING - charm name 47Brand no ad found[0m
+[35;20m2023-05-15 23:39:36,515 - CheckAdWorker - WARNING - facebook name 47brand not found[0m
+[35;20m2023-05-15 23:40:15,636 - CheckAdWorker - WARNING - charm name 4Life no ad found[0m
+[35;20m2023-05-15 23:40:27,197 - CheckAdWorker - WARNING - facebook name 4lifemexicooficial not found[0m
+[35;20m2023-05-15 23:40:47,517 - CheckAdWorker - WARNING - charm name 4over, LLC no ad found[0m
+[35;20m2023-05-15 23:40:59,564 - CheckAdWorker - WARNING - facebook name 4overLLC not found[0m
+[35;20m2023-05-15 23:41:53,290 - CheckAdWorker - WARNING - charm name 4Over4 no ad found[0m
+[31;20m2023-05-15 23:42:14,733 - CheckAdWorker - ERROR - Message: 
+Stacktrace:
+0   chromedriver                        0x000000010aaf2598 chromedriver + 4973976
+1   chromedriver                        0x000000010aae9913 chromedriver + 4938003
+2   chromedriver                        0x000000010a6a6cd6 chromedriver + 470230
+3   chromedriver                        0x000000010a6ea2ff chromedriver + 746239
+4   chromedriver                        0x000000010a6ea591 chromedriver + 746897
+5   chromedriver                        0x000000010a72c384 chromedriver + 1016708
+6   chromedriver                        0x000000010a70e9ed chromedriver + 895469
+7   chromedriver                        0x000000010a729856 chromedriver + 1005654
+8   chromedriver                        0x000000010a70e793 chromedriver + 894867
+9   chromedriver                        0x000000010a6dc21f chromedriver + 688671
+10  chromedriver                        0x000000010a6dd56e chromedriver + 693614
+11  chromedriver                        0x000000010aaacbb7 chromedriver + 4688823
+12  chromedriver                        0x000000010aab1a51 chromedriver + 4708945
+13  chromedriver                        0x000000010aab840f chromedriver + 4736015
+14  chromedriver                        0x000000010aab291a chromedriver + 4712730
+15  chromedriver                        0x000000010aa8587c chromedriver + 4528252
+16  chromedriver                        0x000000010aad1f28 chromedriver + 4841256
+17  chromedriver                        0x000000010aad20a7 chromedriver + 4841639
+18  chromedriver                        0x000000010aae328f chromedriver + 4911759
+19  libsystem_pthread.dylib             0x00007ff8035b41d3 _pthread_start + 125
+20  libsystem_pthread.dylib             0x00007ff8035afbd3 thread_start + 15
+[0m
+[31;20m2023-05-15 23:43:16,323 - CheckAdWorker - ERROR - Message: 
+Stacktrace:
+0   chromedriver                        0x0000000106e2d598 chromedriver + 4973976
+1   chromedriver                        0x0000000106e24913 chromedriver + 4938003
+2   chromedriver                        0x00000001069e1cd6 chromedriver + 470230
+3   chromedriver                        0x0000000106a252ff chromedriver + 746239
+4   chromedriver                        0x0000000106a25591 chromedriver + 746897
+5   chromedriver                        0x0000000106a67384 chromedriver + 1016708
+6   chromedriver                        0x0000000106a499ed chromedriver + 895469
+7   chromedriver                        0x0000000106a64856 chromedriver + 1005654
+8   chromedriver                        0x0000000106a49793 chromedriver + 894867
+9   chromedriver                        0x0000000106a1721f chromedriver + 688671
+10  chromedriver                        0x0000000106a1856e chromedriver + 693614
+11  chromedriver                        0x0000000106de7bb7 chromedriver + 4688823
+12  chromedriver                        0x0000000106deca51 chromedriver + 4708945
+13  chromedriver                        0x0000000106df340f chromedriver + 4736015
+14  chromedriver                        0x0000000106ded91a chromedriver + 4712730
+15  chromedriver                        0x0000000106dc087c chromedriver + 4528252
+16  chromedriver                        0x0000000106e0cf28 chromedriver + 4841256
+17  chromedriver                        0x0000000106e0d0a7 chromedriver + 4841639
+18  chromedriver                        0x0000000106e1e28f chromedriver + 4911759
+19  libsystem_pthread.dylib             0x00007ff8035b41d3 _pthread_start + 125
+20  libsystem_pthread.dylib             0x00007ff8035afbd3 thread_start + 15
+[0m
+[35;20m2023-05-15 23:44:21,113 - CheckAdWorker - WARNING - charm name 5Outof4 no ad found[0m
+[35;20m2023-05-15 23:44:33,727 - CheckAdWorker - WARNING - facebook name 5outof4 not found[0m
+[35;20m2023-05-15 23:44:55,496 - CheckAdWorker - WARNING - charm name 6 Ice no ad found[0m
+[35;20m2023-05-15 23:45:01,999 - CheckAdWorker - WARNING - facebook name shop6ice not found[0m
+[35;20m2023-05-15 23:46:24,832 - CheckAdWorker - WARNING - charm name 86WORX no ad found[0m
+[35;20m2023-05-15 23:46:37,020 - CheckAdWorker - WARNING - facebook name 86worx not found[0m
+[35;20m2023-05-15 23:47:38,636 - CheckAdWorker - WARNING - charm name A1Partyrental no ad found[0m
+[35;20m2023-05-15 23:47:50,181 - CheckAdWorker - WARNING - facebook name a1event not found[0m
+[34;20m2023-05-15 23:47:51,619 - CheckAdWorker - DEBUG - Kill CALLED[0m
+[34;20m2023-05-15 23:47:55,470 - CheckAdWorker - DEBUG - Kill CALLED[0m
+[35;20m2023-05-15 23:48:07,729 - CheckAdWorker - WARNING - charm name A24 no ad found[0m
+[35;20m2023-05-15 23:48:20,104 - CheckAdWorker - WARNING - facebook name a24 not found[0m
+[34;20m2023-05-15 23:48:20,163 - CheckAdWorker - DEBUG - CLOSED[0m
+[35;20m2023-05-15 23:52:01,711 - CheckAdWorker - WARNING - charm name 1A Auto Parts no ad found[0m
+[35;20m2023-05-15 23:52:13,860 - CheckAdWorker - WARNING - facebook name 1AAuto not found[0m
+[35;20m2023-05-15 23:52:32,263 - CheckAdWorker - WARNING - charm name 1Sale no ad found[0m
+[35;20m2023-05-15 23:52:39,018 - CheckAdWorker - WARNING - facebook name 1saleaday not found[0m
+[35;20m2023-05-15 23:53:02,668 - CheckAdWorker - WARNING - charm name 1Stclasshumidors no ad found[0m
+[35;20m2023-05-15 23:53:14,747 - CheckAdWorker - WARNING - facebook name 1stclasshumidors not found[0m
+[34;20m2023-05-15 23:53:52,789 - CheckAdWorker - DEBUG - Kill CALLED[0m
+[34;20m2023-05-15 23:53:52,810 - CheckAdWorker - DEBUG - CLOSED[0m
+[34;20m2023-05-15 23:53:55,418 - CheckAdWorker - DEBUG - Kill CALLED[0m
+[34;20m2023-05-16 00:00:27,967 - CheckAdWorker - DEBUG - 7 : 4424[0m
+[35;20m2023-05-16 00:01:04,867 - CheckAdWorker - WARNING - charm name 21Savage no ad found[0m
+[35;20m2023-05-16 00:01:16,832 - CheckAdWorker - WARNING - facebook name 21savage not found[0m
+[34;20m2023-05-16 00:01:51,005 - CheckAdWorker - DEBUG - Kill CALLED[0m
+[34;20m2023-05-16 00:01:53,736 - CheckAdWorker - DEBUG - CLOSED[0m

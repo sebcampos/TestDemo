@@ -1,0 +1,226 @@
+[34;20m2023-05-17 01:56:20,621 - main-application - DEBUG - building names[0m
+[34;20m2023-05-17 01:56:29,844 - main-application - DEBUG - building names[0m
+[34;20m2023-05-17 01:56:29,846 - main-application - DEBUG - 1536[0m
+[34;20m2023-05-17 01:56:29,864 - main-application - DEBUG - Charm.io Links Sheet1[0m
+[34;20m2023-05-17 01:56:29,864 - main-application - DEBUG - Current Spreadsheet: Charm.io Links[0m
+[34;20m2023-05-17 01:56:36,870 - main-application - DEBUG - Writting process-metadata[0m
+[34;20m2023-05-17 01:56:38,742 - main-application - DEBUG - setting prog bar to 4424[0m
+[34;20m2023-05-17 01:59:45,032 - main-application - DEBUG - building names[0m
+[34;20m2023-05-17 01:59:50,317 - main-application - DEBUG - building names[0m
+[34;20m2023-05-17 01:59:50,317 - main-application - DEBUG - 1536[0m
+[34;20m2023-05-17 01:59:50,330 - main-application - DEBUG - Charm.io Links Sheet1[0m
+[34;20m2023-05-17 01:59:50,330 - main-application - DEBUG - Current Spreadsheet: Charm.io Links[0m
+[34;20m2023-05-17 02:00:01,694 - main-application - DEBUG - Writting process-metadata[0m
+[34;20m2023-05-17 02:00:03,676 - main-application - DEBUG - setting prog bar to 4424[0m
+[34;20m2023-05-17 02:00:26,026 - main-application - DEBUG - updating prog bar to 0[0m
+[34;20m2023-05-17 02:01:23,859 - main-application - DEBUG - updating prog bar to 2[0m
+[34;20m2023-05-17 02:02:24,753 - main-application - DEBUG - updating prog bar to 3[0m
+[34;20m2023-05-17 02:02:34,841 - main-application - DEBUG - thread count:1[0m
+[34;20m2023-05-17 02:03:46,994 - main-application - DEBUG - building names[0m
+[34;20m2023-05-17 02:03:51,429 - main-application - DEBUG - building names[0m
+[34;20m2023-05-17 02:03:51,430 - main-application - DEBUG - 1536[0m
+[34;20m2023-05-17 02:03:51,440 - main-application - DEBUG - Charm.io Links Sheet1[0m
+[34;20m2023-05-17 02:03:51,440 - main-application - DEBUG - Current Spreadsheet: Charm.io Links[0m
+[34;20m2023-05-17 02:03:57,687 - main-application - DEBUG - Writting process-metadata[0m
+[34;20m2023-05-17 02:03:59,665 - main-application - DEBUG - setting prog bar to 4424[0m
+[34;20m2023-05-17 02:04:18,979 - main-application - DEBUG - updating prog bar to 0[0m
+[34;20m2023-05-17 02:04:24,122 - main-application - DEBUG - thread count:1[0m
+[34;20m2023-05-17 02:05:24,031 - main-application - DEBUG - building names[0m
+[34;20m2023-05-17 02:05:32,967 - main-application - DEBUG - building names[0m
+[34;20m2023-05-17 02:05:32,970 - main-application - DEBUG - 1536[0m
+[34;20m2023-05-17 02:05:32,975 - main-application - DEBUG - Charm.io Links Sheet1[0m
+[34;20m2023-05-17 02:05:32,975 - main-application - DEBUG - Current Spreadsheet: Charm.io Links[0m
+[34;20m2023-05-17 02:05:41,139 - main-application - DEBUG - Writting process-metadata[0m
+[34;20m2023-05-17 02:05:43,149 - main-application - DEBUG - setting prog bar to 4424[0m
+[34;20m2023-05-17 02:06:03,584 - main-application - DEBUG - updating prog bar to 0[0m
+[34;20m2023-05-17 02:06:23,531 - main-application - DEBUG - updating prog bar to 2[0m
+[34;20m2023-05-17 02:06:35,529 - main-application - DEBUG - thread count:1[0m
+[34;20m2023-05-17 02:13:31,111 - main-application - DEBUG - building names[0m
+[34;20m2023-05-17 02:13:45,682 - main-application - DEBUG - Writting process-metadata[0m
+[34;20m2023-05-17 02:13:47,459 - main-application - DEBUG - setting prog bar to 12[0m
+[34;20m2023-05-17 02:14:05,165 - main-application - DEBUG - building names[0m
+[34;20m2023-05-17 02:14:10,262 - main-application - DEBUG - Writting process-metadata[0m
+[34;20m2023-05-17 02:14:12,129 - main-application - DEBUG - setting prog bar to 12[0m
+[34;20m2023-05-17 02:14:32,752 - main-application - DEBUG - updating prog bar to 0[0m
+[34;20m2023-05-17 02:14:53,299 - main-application - DEBUG - updating prog bar to 2[0m
+[34;20m2023-05-17 02:18:59,452 - main-application - DEBUG - building names[0m
+[34;20m2023-05-18 10:16:29,827 - main-application - DEBUG - building names[0m
+[34;20m2023-05-18 10:18:59,362 - main-application - DEBUG - 864[0m
+[34;20m2023-05-18 10:18:59,373 - main-application - DEBUG - Test 123 Sheet2[0m
+[34;20m2023-05-18 10:18:59,373 - main-application - DEBUG - Current Spreadsheet: Test 123[0m
+[34;20m2023-05-18 10:19:09,011 - main-application - DEBUG - 864[0m
+[34;20m2023-05-18 10:19:09,012 - main-application - DEBUG - Test 123 Test_05/17[0m
+[34;20m2023-05-18 10:19:09,012 - main-application - DEBUG - Current Spreadsheet: Test 123[0m
+[34;20m2023-05-18 10:25:13,986 - main-application - DEBUG - thread count:0[0m
+[34;20m2023-05-18 10:25:29,777 - main-application - DEBUG - building names[0m
+[34;20m2023-05-18 10:25:36,943 - main-application - DEBUG - Writting process-metadata[0m
+[34;20m2023-05-18 10:25:38,634 - main-application - DEBUG - setting prog bar to 27[0m
+[34;20m2023-05-18 10:26:06,932 - main-application - DEBUG - thread count:1[0m
+[34;20m2023-05-18 10:27:26,594 - main-application - DEBUG - building names[0m
+[34;20m2023-05-18 10:27:37,326 - main-application - DEBUG - Writting process-metadata[0m
+[34;20m2023-05-18 10:27:38,912 - main-application - DEBUG - setting prog bar to 27[0m
+[34;20m2023-05-18 10:28:14,666 - main-application - DEBUG - updating prog bar to 0[0m
+[34;20m2023-05-18 10:28:46,053 - main-application - DEBUG - updating prog bar to 2[0m
+[34;20m2023-05-18 10:29:22,147 - main-application - DEBUG - updating prog bar to 3[0m
+[34;20m2023-05-18 10:29:48,204 - main-application - DEBUG - updating prog bar to 4[0m
+[34;20m2023-05-18 10:30:33,736 - main-application - DEBUG - updating prog bar to 5[0m
+[34;20m2023-05-18 10:31:01,391 - main-application - DEBUG - updating prog bar to 6[0m
+[34;20m2023-05-18 10:31:38,487 - main-application - DEBUG - updating prog bar to 7[0m
+[34;20m2023-05-18 10:32:11,005 - main-application - DEBUG - updating prog bar to 8[0m
+[34;20m2023-05-18 10:32:36,406 - main-application - DEBUG - updating prog bar to 9[0m
+[34;20m2023-05-18 10:33:07,252 - main-application - DEBUG - updating prog bar to 10[0m
+[34;20m2023-05-18 10:33:39,400 - main-application - DEBUG - updating prog bar to 11[0m
+[34;20m2023-05-18 10:34:11,541 - main-application - DEBUG - updating prog bar to 12[0m
+[34;20m2023-05-18 10:34:37,380 - main-application - DEBUG - updating prog bar to 13[0m
+[34;20m2023-05-18 10:35:08,906 - main-application - DEBUG - updating prog bar to 14[0m
+[34;20m2023-05-18 10:35:39,781 - main-application - DEBUG - updating prog bar to 15[0m
+[34;20m2023-05-18 10:36:09,554 - main-application - DEBUG - updating prog bar to 16[0m
+[34;20m2023-05-18 10:36:39,146 - main-application - DEBUG - updating prog bar to 17[0m
+[34;20m2023-05-18 10:37:16,003 - main-application - DEBUG - updating prog bar to 18[0m
+[34;20m2023-05-18 10:37:52,157 - main-application - DEBUG - updating prog bar to 19[0m
+[34;20m2023-05-18 10:38:28,321 - main-application - DEBUG - updating prog bar to 20[0m
+[34;20m2023-05-18 10:38:58,427 - main-application - DEBUG - updating prog bar to 21[0m
+[34;20m2023-05-18 10:39:29,083 - main-application - DEBUG - updating prog bar to 22[0m
+[34;20m2023-05-18 10:39:54,757 - main-application - DEBUG - updating prog bar to 23[0m
+[34;20m2023-05-18 10:40:25,696 - main-application - DEBUG - updating prog bar to 24[0m
+[34;20m2023-05-18 10:40:53,810 - main-application - DEBUG - updating prog bar to 25[0m
+[34;20m2023-05-18 10:41:20,035 - main-application - DEBUG - updating prog bar to 26[0m
+[34;20m2023-05-18 10:41:46,413 - main-application - DEBUG - updating prog bar to 27[0m
+[34;20m2023-05-18 10:41:50,073 - main-application - DEBUG - reseting prog bar[0m
+[34;20m2023-05-18 10:41:50,074 - main-application - DEBUG - enable button called[0m
+[34;20m2023-05-18 10:41:50,076 - main-application - DEBUG - 864[0m
+[34;20m2023-05-18 10:41:50,084 - main-application - DEBUG - Test 123 Test_05/17[0m
+[34;20m2023-05-18 10:41:50,084 - main-application - DEBUG - Current Spreadsheet: Test 123[0m
+[34;20m2023-05-18 10:45:55,868 - main-application - DEBUG - thread count:0[0m
+[34;20m2023-05-18 10:46:09,948 - main-application - DEBUG - building names[0m
+[34;20m2023-05-18 10:46:49,762 - main-application - DEBUG - Writting process-metadata[0m
+[34;20m2023-05-18 10:46:51,941 - main-application - DEBUG - setting prog bar to 27[0m
+[34;20m2023-05-18 10:47:20,667 - main-application - DEBUG - thread count:1[0m
+[34;20m2023-05-18 10:50:53,895 - main-application - DEBUG - building names[0m
+[34;20m2023-05-18 10:50:58,409 - main-application - DEBUG - thread count:0[0m
+[34;20m2023-05-18 10:52:37,619 - main-application - DEBUG - building names[0m
+[34;20m2023-05-18 10:52:54,434 - main-application - DEBUG - Writting process-metadata[0m
+[34;20m2023-05-18 10:52:55,978 - main-application - DEBUG - setting prog bar to 27[0m
+[34;20m2023-05-18 10:53:14,506 - main-application - DEBUG - updating prog bar to 0[0m
+[34;20m2023-05-18 10:53:28,997 - main-application - DEBUG - updating prog bar to 2[0m
+[34;20m2023-05-18 10:53:47,510 - main-application - DEBUG - updating prog bar to 3[0m
+[34;20m2023-05-18 10:54:16,655 - main-application - DEBUG - updating prog bar to 4[0m
+[34;20m2023-05-18 10:54:49,006 - main-application - DEBUG - updating prog bar to 5[0m
+[34;20m2023-05-18 10:55:18,199 - main-application - DEBUG - updating prog bar to 6[0m
+[34;20m2023-05-18 10:55:37,031 - main-application - DEBUG - updating prog bar to 7[0m
+[34;20m2023-05-18 10:55:51,617 - main-application - DEBUG - updating prog bar to 8[0m
+[34;20m2023-05-18 10:56:22,140 - main-application - DEBUG - updating prog bar to 9[0m
+[34;20m2023-05-18 10:56:35,315 - main-application - DEBUG - updating prog bar to 10[0m
+[34;20m2023-05-18 10:56:49,419 - main-application - DEBUG - updating prog bar to 11[0m
+[34;20m2023-05-18 10:57:04,752 - main-application - DEBUG - updating prog bar to 12[0m
+[34;20m2023-05-18 10:57:34,898 - main-application - DEBUG - updating prog bar to 13[0m
+[34;20m2023-05-18 10:57:50,556 - main-application - DEBUG - updating prog bar to 14[0m
+[34;20m2023-05-18 10:58:03,967 - main-application - DEBUG - updating prog bar to 15[0m
+[34;20m2023-05-18 10:58:17,240 - main-application - DEBUG - updating prog bar to 16[0m
+[34;20m2023-05-18 10:58:29,928 - main-application - DEBUG - updating prog bar to 17[0m
+[34;20m2023-05-18 10:58:50,608 - main-application - DEBUG - updating prog bar to 18[0m
+[34;20m2023-05-18 10:59:10,845 - main-application - DEBUG - updating prog bar to 19[0m
+[34;20m2023-05-18 10:59:30,893 - main-application - DEBUG - updating prog bar to 20[0m
+[34;20m2023-05-18 10:59:45,563 - main-application - DEBUG - updating prog bar to 21[0m
+[34;20m2023-05-18 10:59:59,636 - main-application - DEBUG - updating prog bar to 22[0m
+[34;20m2023-05-18 11:00:32,321 - main-application - DEBUG - updating prog bar to 23[0m
+[34;20m2023-05-18 11:00:45,981 - main-application - DEBUG - updating prog bar to 24[0m
+[34;20m2023-05-18 11:01:16,966 - main-application - DEBUG - updating prog bar to 25[0m
+[34;20m2023-05-18 11:01:49,604 - main-application - DEBUG - updating prog bar to 26[0m
+[34;20m2023-05-18 11:02:22,229 - main-application - DEBUG - updating prog bar to 27[0m
+[34;20m2023-05-18 11:02:25,745 - main-application - DEBUG - reseting prog bar[0m
+[34;20m2023-05-18 11:02:25,746 - main-application - DEBUG - enable button called[0m
+[34;20m2023-05-18 11:02:25,748 - main-application - DEBUG - 864[0m
+[34;20m2023-05-18 11:02:25,756 - main-application - DEBUG - Test 123 Test_05/17[0m
+[34;20m2023-05-18 11:02:25,757 - main-application - DEBUG - Current Spreadsheet: Test 123[0m
+[34;20m2023-05-18 11:02:46,247 - main-application - DEBUG - thread count:0[0m
+[34;20m2023-05-18 11:03:15,282 - main-application - DEBUG - building names[0m
+[34;20m2023-05-18 11:03:23,746 - main-application - DEBUG - thread count:0[0m
+[34;20m2023-05-18 11:03:55,775 - main-application - DEBUG - building names[0m
+[34;20m2023-05-18 11:04:30,363 - main-application - DEBUG - thread count:0[0m
+[34;20m2023-05-18 11:04:34,734 - main-application - DEBUG - building names[0m
+[34;20m2023-05-18 11:04:41,740 - main-application - DEBUG - Writting process-metadata[0m
+[34;20m2023-05-18 11:04:43,033 - main-application - DEBUG - setting prog bar to 27[0m
+[34;20m2023-05-18 11:05:17,182 - main-application - DEBUG - building names[0m
+[34;20m2023-05-18 11:05:29,654 - main-application - DEBUG - Writting process-metadata[0m
+[34;20m2023-05-18 11:05:30,817 - main-application - DEBUG - setting prog bar to 27[0m
+[34;20m2023-05-18 11:05:43,722 - main-application - DEBUG - continue with process selected[0m
+[34;20m2023-05-18 11:05:55,624 - main-application - DEBUG - updating prog bar to 0[0m
+[34;20m2023-05-18 11:05:57,445 - main-application - DEBUG - thread count:1[0m
+[34;20m2023-05-18 11:06:59,781 - main-application - DEBUG - building names[0m
+[34;20m2023-05-18 11:07:03,872 - main-application - DEBUG - Denied re-run, removing file[0m
+[34;20m2023-05-18 11:07:09,169 - main-application - DEBUG - Writting process-metadata[0m
+[34;20m2023-05-18 11:07:10,663 - main-application - DEBUG - setting prog bar to 27[0m
+[34;20m2023-05-18 11:07:32,818 - main-application - DEBUG - updating prog bar to 0[0m
+[34;20m2023-05-18 11:07:49,510 - main-application - DEBUG - updating prog bar to 2[0m
+[34;20m2023-05-18 11:08:07,687 - main-application - DEBUG - thread count:1[0m
+[34;20m2023-05-18 11:11:48,419 - main-application - DEBUG - building names[0m
+[34;20m2023-05-18 11:11:53,364 - main-application - DEBUG - Writting process-metadata[0m
+[34;20m2023-05-18 11:11:55,002 - main-application - DEBUG - setting prog bar to 27[0m
+[34;20m2023-05-18 11:14:31,085 - main-application - DEBUG - building names[0m
+[34;20m2023-05-18 11:14:35,745 - main-application - DEBUG - Writting process-metadata[0m
+[34;20m2023-05-18 11:14:37,166 - main-application - DEBUG - setting prog bar to 27[0m
+[34;20m2023-05-18 11:15:00,212 - main-application - DEBUG - updating prog bar to 0[0m
+[34;20m2023-05-18 11:15:08,207 - main-application - DEBUG - thread count:1[0m
+[34;20m2023-05-18 11:15:24,347 - main-application - DEBUG - building names[0m
+[34;20m2023-05-18 11:15:28,139 - main-application - DEBUG - Denied re-run, removing file[0m
+[34;20m2023-05-18 11:15:32,616 - main-application - DEBUG - Writting process-metadata[0m
+[34;20m2023-05-18 11:15:34,291 - main-application - DEBUG - setting prog bar to 27[0m
+[34;20m2023-05-18 11:15:57,223 - main-application - DEBUG - updating prog bar to 0[0m
+[34;20m2023-05-18 11:16:01,715 - main-application - DEBUG - thread count:1[0m
+[34;20m2023-05-18 11:18:55,368 - main-application - DEBUG - building names[0m
+[34;20m2023-05-18 11:18:58,851 - main-application - DEBUG - Denied re-run, removing file[0m
+[34;20m2023-05-18 11:19:11,109 - main-application - DEBUG - thread count:0[0m
+[34;20m2023-05-18 11:59:19,441 - main-application - DEBUG - building names[0m
+[34;20m2023-05-18 11:59:26,827 - main-application - DEBUG - Writting process-metadata[0m
+[34;20m2023-05-18 11:59:28,507 - main-application - DEBUG - setting prog bar to 27[0m
+[34;20m2023-05-18 11:59:44,300 - main-application - DEBUG - thread count:1[0m
+[34;20m2023-05-18 12:00:52,668 - main-application - DEBUG - building names[0m
+[34;20m2023-05-18 12:00:59,360 - main-application - DEBUG - Writting process-metadata[0m
+[34;20m2023-05-18 12:01:01,052 - main-application - DEBUG - setting prog bar to 27[0m
+[34;20m2023-05-18 12:01:01,960 - main-application - DEBUG - terminate process selected[0m
+[34;20m2023-05-18 12:01:01,961 - main-application - DEBUG - reseting prog bar[0m
+[34;20m2023-05-18 12:01:27,014 - main-application - DEBUG - enable button called[0m
+[34;20m2023-05-18 12:01:27,016 - main-application - DEBUG - 864[0m
+[34;20m2023-05-18 12:01:27,024 - main-application - DEBUG - Test 123 Test_05/17[0m
+[34;20m2023-05-18 12:01:27,024 - main-application - DEBUG - Current Spreadsheet: Test 123[0m
+[34;20m2023-05-18 12:01:40,128 - main-application - DEBUG - Writting process-metadata[0m
+[34;20m2023-05-18 12:01:41,808 - main-application - DEBUG - setting prog bar to 27[0m
+[34;20m2023-05-18 12:01:41,808 - main-application - DEBUG - setting prog bar to 27[0m
+[34;20m2023-05-18 12:02:03,317 - main-application - DEBUG - thread count:1[0m
+[34;20m2023-05-18 12:03:02,811 - main-application - DEBUG - building names[0m
+[34;20m2023-05-18 12:04:10,396 - main-application - DEBUG - Writting process-metadata[0m
+[34;20m2023-05-18 12:04:12,187 - main-application - DEBUG - setting prog bar to 27[0m
+[34;20m2023-05-18 12:04:37,883 - main-application - DEBUG - updating prog bar to 0[0m
+[34;20m2023-05-18 12:04:57,572 - main-application - DEBUG - updating prog bar to 2[0m
+[34;20m2023-05-18 12:05:23,641 - main-application - DEBUG - updating prog bar to 3[0m
+[34;20m2023-05-18 12:05:50,467 - main-application - DEBUG - updating prog bar to 4[0m
+[34;20m2023-05-18 12:06:26,306 - main-application - DEBUG - updating prog bar to 5[0m
+[34;20m2023-05-18 12:06:52,103 - main-application - DEBUG - updating prog bar to 6[0m
+[34;20m2023-05-18 12:07:18,472 - main-application - DEBUG - updating prog bar to 7[0m
+[34;20m2023-05-18 12:07:38,809 - main-application - DEBUG - updating prog bar to 8[0m
+[34;20m2023-05-18 12:08:04,296 - main-application - DEBUG - updating prog bar to 9[0m
+[34;20m2023-05-18 12:08:24,467 - main-application - DEBUG - updating prog bar to 10[0m
+[34;20m2023-05-18 12:08:44,995 - main-application - DEBUG - updating prog bar to 11[0m
+[34;20m2023-05-18 12:09:04,845 - main-application - DEBUG - updating prog bar to 12[0m
+[34;20m2023-05-18 12:09:32,369 - main-application - DEBUG - updating prog bar to 13[0m
+[34;20m2023-05-18 12:09:54,353 - main-application - DEBUG - updating prog bar to 14[0m
+[34;20m2023-05-18 12:10:17,178 - main-application - DEBUG - updating prog bar to 15[0m
+[34;20m2023-05-18 12:10:38,594 - main-application - DEBUG - updating prog bar to 16[0m
+[34;20m2023-05-18 12:11:03,921 - main-application - DEBUG - updating prog bar to 17[0m
+[34;20m2023-05-18 12:11:30,266 - main-application - DEBUG - updating prog bar to 18[0m
+[34;20m2023-05-18 12:11:56,923 - main-application - DEBUG - updating prog bar to 19[0m
+[34;20m2023-05-18 12:12:23,554 - main-application - DEBUG - updating prog bar to 20[0m
+[34;20m2023-05-18 12:12:44,619 - main-application - DEBUG - updating prog bar to 21[0m
+[34;20m2023-05-18 12:13:05,555 - main-application - DEBUG - updating prog bar to 22[0m
+[34;20m2023-05-18 12:13:32,859 - main-application - DEBUG - updating prog bar to 23[0m
+[34;20m2023-05-18 12:13:54,672 - main-application - DEBUG - updating prog bar to 24[0m
+[34;20m2023-05-18 12:14:21,786 - main-application - DEBUG - updating prog bar to 25[0m
+[34;20m2023-05-18 12:14:49,098 - main-application - DEBUG - updating prog bar to 26[0m
+[34;20m2023-05-18 12:15:15,419 - main-application - DEBUG - updating prog bar to 27[0m
+[34;20m2023-05-18 12:15:18,865 - main-application - DEBUG - reseting prog bar[0m
+[34;20m2023-05-18 12:15:18,867 - main-application - DEBUG - enable button called[0m
+[34;20m2023-05-18 12:15:18,867 - main-application - DEBUG - 864[0m
+[34;20m2023-05-18 12:15:18,873 - main-application - DEBUG - Test 123 Test_05/17[0m
+[34;20m2023-05-18 12:15:18,873 - main-application - DEBUG - Current Spreadsheet: Test 123[0m
+[34;20m2023-05-18 12:16:30,039 - main-application - DEBUG - thread count:0[0m

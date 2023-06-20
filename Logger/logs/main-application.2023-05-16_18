@@ -1,0 +1,73 @@
+[34;20m2023-05-16 17:55:50,936 - main-application - DEBUG - building names[0m
+[34;20m2023-05-16 17:56:07,634 - main-application - DEBUG - building names[0m
+[34;20m2023-05-16 17:56:13,541 - main-application - DEBUG - building names[0m
+[34;20m2023-05-16 17:56:13,544 - main-application - DEBUG - 1536[0m
+[34;20m2023-05-16 17:56:13,598 - main-application - DEBUG - Charm.io Links Sheet1[0m
+[34;20m2023-05-16 17:56:13,598 - main-application - DEBUG - Current Spreadsheet: Charm.io Links[0m
+[34;20m2023-05-16 17:56:18,648 - main-application - DEBUG - building names[0m
+[34;20m2023-05-16 17:56:18,648 - main-application - DEBUG - 1536[0m
+[34;20m2023-05-16 17:56:18,649 - main-application - DEBUG - Test Sheet1[0m
+[34;20m2023-05-16 17:56:18,649 - main-application - DEBUG - Current Spreadsheet: Test[0m
+[34;20m2023-05-16 17:56:51,144 - main-application - DEBUG - Writting process-metadata[0m
+[34;20m2023-05-16 17:57:18,024 - main-application - DEBUG - building names[0m
+[34;20m2023-05-16 17:58:18,978 - main-application - DEBUG - Writting process-metadata[0m
+[34;20m2023-05-16 17:59:46,734 - main-application - DEBUG - building names[0m
+[34;20m2023-05-16 17:59:55,018 - main-application - DEBUG - Writting process-metadata[0m
+[34;20m2023-05-16 17:59:57,402 - main-application - DEBUG - setting prog bar to 12[0m
+[34;20m2023-05-16 18:00:13,884 - main-application - DEBUG - updating prog bar to 0[0m
+[34;20m2023-05-16 18:00:13,892 - main-application - DEBUG - updating prog bar to 2[0m
+[34;20m2023-05-16 18:00:49,650 - main-application - DEBUG - building names[0m
+[34;20m2023-05-16 18:01:14,060 - main-application - DEBUG - Writting process-metadata[0m
+[34;20m2023-05-16 18:01:16,575 - main-application - DEBUG - setting prog bar to 12[0m
+[34;20m2023-05-16 18:01:50,479 - main-application - DEBUG - updating prog bar to 0[0m
+[34;20m2023-05-16 18:02:41,514 - main-application - DEBUG - updating prog bar to 2[0m
+[34;20m2023-05-16 18:03:10,510 - main-application - DEBUG - updating prog bar to 3[0m
+[34;20m2023-05-16 18:03:47,554 - main-application - DEBUG - updating prog bar to 4[0m
+[34;20m2023-05-16 18:04:03,662 - main-application - DEBUG - updating prog bar to 5[0m
+[34;20m2023-05-16 18:04:35,614 - main-application - DEBUG - updating prog bar to 6[0m
+[34;20m2023-05-16 18:05:02,692 - main-application - DEBUG - updating prog bar to 7[0m
+[34;20m2023-05-16 18:05:36,622 - main-application - DEBUG - updating prog bar to 8[0m
+[34;20m2023-05-16 18:06:11,520 - main-application - DEBUG - updating prog bar to 9[0m
+[34;20m2023-05-16 18:06:36,443 - main-application - DEBUG - updating prog bar to 10[0m
+[34;20m2023-05-16 18:07:17,149 - main-application - DEBUG - updating prog bar to 11[0m
+[34;20m2023-05-16 18:07:59,141 - main-application - DEBUG - updating prog bar to 12[0m
+[34;20m2023-05-16 18:08:03,000 - main-application - DEBUG - reseting prog bar[0m
+[34;20m2023-05-16 18:08:03,000 - main-application - DEBUG - enable button called[0m
+[34;20m2023-05-16 18:08:03,004 - main-application - DEBUG - 1536[0m
+[34;20m2023-05-16 18:08:03,025 - main-application - DEBUG - Test Sheet1[0m
+[34;20m2023-05-16 18:08:03,025 - main-application - DEBUG - Current Spreadsheet: Test[0m
+[34;20m2023-05-16 18:25:23,433 - main-application - DEBUG - Writting process-metadata[0m
+[34;20m2023-05-16 18:25:26,755 - main-application - DEBUG - setting prog bar to 12[0m
+[34;20m2023-05-16 18:25:26,755 - main-application - DEBUG - setting prog bar to 12[0m
+[34;20m2023-05-16 18:25:27,268 - main-application - DEBUG - continue with process selected[0m
+[34;20m2023-05-16 18:26:00,338 - main-application - DEBUG - updating prog bar to 1[0m
+[34;20m2023-05-16 18:26:00,338 - main-application - DEBUG - updating prog bar to 2[0m
+[34;20m2023-05-16 18:26:42,299 - main-application - DEBUG - updating prog bar to 3[0m
+[34;20m2023-05-16 18:26:42,300 - main-application - DEBUG - updating prog bar to 4[0m
+[34;20m2023-05-16 18:27:21,638 - main-application - DEBUG - updating prog bar to 5[0m
+[34;20m2023-05-16 18:27:21,639 - main-application - DEBUG - updating prog bar to 6[0m
+[34;20m2023-05-16 18:28:01,173 - main-application - DEBUG - updating prog bar to 7[0m
+[34;20m2023-05-16 18:28:01,173 - main-application - DEBUG - updating prog bar to 8[0m
+[34;20m2023-05-16 18:28:47,593 - main-application - DEBUG - updating prog bar to 9[0m
+[34;20m2023-05-16 18:28:47,593 - main-application - DEBUG - updating prog bar to 10[0m
+[34;20m2023-05-16 18:29:24,057 - main-application - DEBUG - updating prog bar to 11[0m
+[34;20m2023-05-16 18:29:24,057 - main-application - DEBUG - updating prog bar to 12[0m
+[34;20m2023-05-16 18:29:49,145 - main-application - DEBUG - updating prog bar to 13[0m
+[34;20m2023-05-16 18:29:49,146 - main-application - DEBUG - updating prog bar to 13[0m
+[34;20m2023-05-16 18:30:24,184 - main-application - DEBUG - updating prog bar to 13[0m
+[34;20m2023-05-16 18:30:24,185 - main-application - DEBUG - updating prog bar to 13[0m
+[34;20m2023-05-16 18:30:47,469 - main-application - DEBUG - updating prog bar to 13[0m
+[34;20m2023-05-16 18:30:47,472 - main-application - DEBUG - updating prog bar to 13[0m
+[34;20m2023-05-16 18:31:23,749 - main-application - DEBUG - updating prog bar to 13[0m
+[34;20m2023-05-16 18:31:23,750 - main-application - DEBUG - updating prog bar to 13[0m
+[34;20m2023-05-16 18:32:05,701 - main-application - DEBUG - updating prog bar to 13[0m
+[34;20m2023-05-16 18:32:05,702 - main-application - DEBUG - updating prog bar to 13[0m
+[34;20m2023-05-16 18:32:47,530 - main-application - DEBUG - updating prog bar to 13[0m
+[34;20m2023-05-16 18:32:47,534 - main-application - DEBUG - updating prog bar to 13[0m
+[34;20m2023-05-16 18:32:51,262 - main-application - DEBUG - reseting prog bar[0m
+[34;20m2023-05-16 18:32:51,263 - main-application - DEBUG - reseting prog bar[0m
+[34;20m2023-05-16 18:32:51,263 - main-application - DEBUG - enable button called[0m
+[34;20m2023-05-16 18:32:51,263 - main-application - DEBUG - 1536[0m
+[34;20m2023-05-16 18:32:51,267 - main-application - DEBUG - Test Sheet1[0m
+[34;20m2023-05-16 18:32:51,267 - main-application - DEBUG - Current Spreadsheet: Test[0m
+[34;20m2023-05-16 18:32:51,270 - main-application - DEBUG - enable button called[0m

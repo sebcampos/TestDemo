@@ -1,0 +1,4 @@
+[34;20m2023-06-20 12:47:04,653 - test-suite - DEBUG - Searching for element '//input[@name="username"]'[0m
+[34;20m2023-06-20 12:47:04,812 - test-suite - DEBUG - Searching for element '//button[@id="login-submit"]'[0m
+[34;20m2023-06-20 12:47:04,846 - test-suite - DEBUG - Searching for element '//button[@id="signup-submit"]'[0m
+[38;20m2023-06-20 12:47:05,461 - test-suite - INFO - test_jira_invalid_login [PASSED][0m

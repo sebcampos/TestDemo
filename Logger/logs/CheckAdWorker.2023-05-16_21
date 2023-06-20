@@ -1,0 +1,22 @@
+[34;20m2023-05-16 21:29:13,722 - CheckAdWorker - DEBUG - setting progress bar size to 12[0m
+[35;20m2023-05-16 21:32:04,313 - CheckAdWorker - WARNING - charm name Naaahratlanta no ad found[0m
+[35;20m2023-05-16 21:32:17,923 - CheckAdWorker - WARNING - facebook name naaahratl not found[0m
+[34;20m2023-05-16 21:33:30,407 - CheckAdWorker - DEBUG - spreadsheet: Test sheetname: Sheet1 rowcount: 12[0m
+[34;20m2023-05-16 21:33:32,753 - CheckAdWorker - DEBUG - {
+  "spreadsheetId": "1lOSaVFsA1xJunMMARwUSdI3ERD_MV4nV50ZH0zLYcGc",
+  "totalUpdatedRows": 13,
+  "totalUpdatedColumns": 6,
+  "totalUpdatedCells": 78,
+  "totalUpdatedSheets": 1,
+  "responses": [
+    {
+      "spreadsheetId": "1lOSaVFsA1xJunMMARwUSdI3ERD_MV4nV50ZH0zLYcGc",
+      "updatedRange": "Sheet1!A1:F13",
+      "updatedRows": 13,
+      "updatedColumns": 6,
+      "updatedCells": 78
+    }
+  ]
+}
+[0m
+[34;20m2023-05-16 21:33:32,753 - CheckAdWorker - DEBUG - removing files[0m
