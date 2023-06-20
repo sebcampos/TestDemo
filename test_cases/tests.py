@@ -7,7 +7,7 @@ def test_launch_driver():
 
 
 @selenium_test
-def test_jira_invalid_login(driver, headless=True):
+def test_jira_invalid_login(driver, headless=True, capture_screenshot=True):
 
     # visit Jira
     driver.get('https://id.atlassian.com/login')
@@ -25,7 +25,7 @@ def test_jira_invalid_login(driver, headless=True):
 
 
 @selenium_test
-def test_jira_valid_login(driver):
+def test_jira_valid_login(driver, headless=True, capture_screenshot=True):
 
     # visit Jira
     driver.get('https://id.atlassian.com/login')
@@ -41,10 +41,10 @@ def test_jira_valid_login(driver):
 
     return True
 
-# @selenium_test
-# def test_made_to_fail(driver):
-#
-#     # visit fake page
-#     driver.get('https://notarealsite.org')
-#
-#     assert driver.get_element('//input[@name="username"]').send_keys('sebcampos23@gmail.com')
+@selenium_test
+def test_made_to_fail(driver, headless=True, capture_screenshot=True):
+
+    # visit fake page
+    driver.get('https://notarealsite.org')
+
+    assert driver.get_element('//input[@name="username"]').send_keys('sebcampos23@gmail.com')

@@ -2,7 +2,7 @@ import json
 import datetime
 from selenium import webdriver
 from selenium.common import TimeoutException
-from inspect import signature, Parameter
+from inspect import signature
 from selenium.webdriver import Keys
 from selenium.webdriver.chrome.options import Options
 from selenium.webdriver.common.by import By
@@ -10,8 +10,8 @@ from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.support.wait import WebDriverWait
 from Logger import set_up_logger
 
-
 logger = set_up_logger('test-suite')
+
 
 class BasicSeleniumDriver(webdriver.Chrome):
     wait: WebDriverWait
@@ -64,12 +64,16 @@ def selenium_test(func):
         if params.get('capture_screenshot'):
             capture_screenshot = params.get('capture_screenshot').default
         driver = BasicSeleniumDriver(headless=headless)
-        passed = func(driver)
+        try:
+            passed = func(driver)
+        except Exception as e:
+             passed = False
         if capture_screenshot:
-            driver.save_screenshot(func.__name__+f"{datetime.datetime.now()}")
+            driver.save_screenshot(func.__name__ + f"{datetime.datetime.now()}.png")
         driver.quit()
         if passed:
             logger.info(f'{func.__name__} [PASSED]')
         else:
             logger.error(f'{func.__name__} [FAILED]')
+        assert passed
     return _call_with_driver

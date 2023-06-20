@@ -1,0 +1,8 @@
+[34;20m2023-06-20 13:26:22,181 - test-suite - DEBUG - Searching for element '//input[@name="username"]'[0m
+[34;20m2023-06-20 13:26:22,319 - test-suite - DEBUG - Searching for element '//button[@id="login-submit"]'[0m
+[34;20m2023-06-20 13:26:22,355 - test-suite - DEBUG - Searching for element '//button[@id="signup-submit"]'[0m
+[38;20m2023-06-20 13:26:23,069 - test-suite - INFO - test_jira_invalid_login [PASSED][0m
+[34;20m2023-06-20 13:26:24,941 - test-suite - DEBUG - Searching for element '//input[@name="username"]'[0m
+[34;20m2023-06-20 13:26:25,076 - test-suite - DEBUG - Searching for element '//button[@id="login-submit"]'[0m
+[34;20m2023-06-20 13:26:25,110 - test-suite - DEBUG - Searching for element '//button[@id='social-login-submit']//span[contains(text(), 'Continue with Google')]'[0m
+[38;20m2023-06-20 13:26:25,817 - test-suite - INFO - test_jira_valid_login [PASSED][0m

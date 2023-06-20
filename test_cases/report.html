@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8"/>
+    <title>report.html</title>
+    <link href="assets/style.css" rel="stylesheet" type="text/css"/></head>
+  <body onLoad="init()">
+    <script>/* This Source Code Form is subject to the terms of the Mozilla Public
+ * License, v. 2.0. If a copy of the MPL was not distributed with this file,
+ * You can obtain one at http://mozilla.org/MPL/2.0/. */
+
+
+function toArray(iter) {
+    if (iter === null) {
+        return null;
+    }
+    return Array.prototype.slice.call(iter);
+}
+
+function find(selector, elem) { // eslint-disable-line no-redeclare
+    if (!elem) {
+        elem = document;
+    }
+    return elem.querySelector(selector);
+}
+
+function findAll(selector, elem) {
+    if (!elem) {
+        elem = document;
+    }
+    return toArray(elem.querySelectorAll(selector));
+}
+
+function sortColumn(elem) {
+    toggleSortStates(elem);
+    const colIndex = toArray(elem.parentNode.childNodes).indexOf(elem);
+    let key;
+    if (elem.classList.contains('result')) {
+        key = keyResult;
+    } else if (elem.classList.contains('links')) {
+        key = keyLink;
+    } else {
+        key = keyAlpha;
+    }
+    sortTable(elem, key(colIndex));
+}
+
+function showAllExtras() { // eslint-disable-line no-unused-vars
+    findAll('.col-result').forEach(showExtras);
+}
+
+function hideAllExtras() { // eslint-disable-line no-unused-vars
+    findAll('.col-result').forEach(hideExtras);
+}
+
+function showExtras(colresultElem) {
+    const extras = colresultElem.parentNode.nextElementSibling;
+    const expandcollapse = colresultElem.firstElementChild;
+    extras.classList.remove('collapsed');
+    expandcollapse.classList.remove('expander');
+    expandcollapse.classList.add('collapser');
+}
+
+function hideExtras(colresultElem) {
+    const extras = colresultElem.parentNode.nextElementSibling;
+    const expandcollapse = colresultElem.firstElementChild;
+    extras.classList.add('collapsed');
+    expandcollapse.classList.remove('collapser');
+    expandcollapse.classList.add('expander');
+}
+
+function showFilters() {
+    let visibleString = getQueryParameter('visible') || 'all';
+    visibleString = visibleString.toLowerCase();
+    const checkedItems = visibleString.split(',');
+
+    const filterItems = document.getElementsByClassName('filter');
+    for (let i = 0; i < filterItems.length; i++) {
+        filterItems[i].hidden = false;
+
+        if (visibleString != 'all') {
+            filterItems[i].checked = checkedItems.includes(filterItems[i].getAttribute('data-test-result'));
+            filterTable(filterItems[i]);
+        }
+    }
+}
+
+function addCollapse() {
+    // Add links for show/hide all
+    const resulttable = find('table#results-table');
+    const showhideall = document.createElement('p');
+    showhideall.innerHTML = '<a href="javascript:showAllExtras()">Show all details</a> / ' +
+                            '<a href="javascript:hideAllExtras()">Hide all details</a>';
+    resulttable.parentElement.insertBefore(showhideall, resulttable);
+
+    // Add show/hide link to each result
+    findAll('.col-result').forEach(function(elem) {
+        const collapsed = getQueryParameter('collapsed') || 'Passed';
+        const extras = elem.parentNode.nextElementSibling;
+        const expandcollapse = document.createElement('span');
+        if (extras.classList.contains('collapsed')) {
+            expandcollapse.classList.add('expander');
+        } else if (collapsed.includes(elem.innerHTML)) {
+            extras.classList.add('collapsed');
+            expandcollapse.classList.add('expander');
+        } else {
+            expandcollapse.classList.add('collapser');
+        }
+        elem.appendChild(expandcollapse);
+
+        elem.addEventListener('click', function(event) {
+            if (event.currentTarget.parentNode.nextElementSibling.classList.contains('collapsed')) {
+                showExtras(event.currentTarget);
+            } else {
+                hideExtras(event.currentTarget);
+            }
+        });
+    });
+}
+
+function getQueryParameter(name) {
+    const match = RegExp('[?&]' + name + '=([^&]*)').exec(window.location.search);
+    return match && decodeURIComponent(match[1].replace(/\+/g, ' '));
+}
+
+function init () { // eslint-disable-line no-unused-vars
+    resetSortHeaders();
+
+    addCollapse();
+
+    showFilters();
+
+    sortColumn(find('.initial-sort'));
+
+    findAll('.sortable').forEach(function(elem) {
+        elem.addEventListener('click',
+            function() {
+                sortColumn(elem);
+            }, false);
+    });
+}
+
+function sortTable(clicked, keyFunc) {
+    const rows = findAll('.results-table-row');
+    const reversed = !clicked.classList.contains('asc');
+    const sortedRows = sort(rows, keyFunc, reversed);
+    /* Whole table is removed here because browsers acts much slower
+     * when appending existing elements.
+     */
+    const thead = document.getElementById('results-table-head');
+    document.getElementById('results-table').remove();
+    const parent = document.createElement('table');
+    parent.id = 'results-table';
+    parent.appendChild(thead);
+    sortedRows.forEach(function(elem) {
+        parent.appendChild(elem);
+    });
+    document.getElementsByTagName('BODY')[0].appendChild(parent);
+}
+
+function sort(items, keyFunc, reversed) {
+    const sortArray = items.map(function(item, i) {
+        return [keyFunc(item), i];
+    });
+
+    sortArray.sort(function(a, b) {
+        const keyA = a[0];
+        const keyB = b[0];
+
+        if (keyA == keyB) return 0;
+
+        if (reversed) {
+            return keyA < keyB ? 1 : -1;
+        } else {
+            return keyA > keyB ? 1 : -1;
+        }
+    });
+
+    return sortArray.map(function(item) {
+        const index = item[1];
+        return items[index];
+    });
+}
+
+function keyAlpha(colIndex) {
+    return function(elem) {
+        return elem.childNodes[1].childNodes[colIndex].firstChild.data.toLowerCase();
+    };
+}
+
+function keyLink(colIndex) {
+    return function(elem) {
+        const dataCell = elem.childNodes[1].childNodes[colIndex].firstChild;
+        return dataCell == null ? '' : dataCell.innerText.toLowerCase();
+    };
+}
+
+function keyResult(colIndex) {
+    return function(elem) {
+        const strings = ['Error', 'Failed', 'Rerun', 'XFailed', 'XPassed',
+            'Skipped', 'Passed'];
+        return strings.indexOf(elem.childNodes[1].childNodes[colIndex].firstChild.data);
+    };
+}
+
+function resetSortHeaders() {
+    findAll('.sort-icon').forEach(function(elem) {
+        elem.parentNode.removeChild(elem);
+    });
+    findAll('.sortable').forEach(function(elem) {
+        const icon = document.createElement('div');
+        icon.className = 'sort-icon';
+        icon.textContent = 'vvv';
+        elem.insertBefore(icon, elem.firstChild);
+        elem.classList.remove('desc', 'active');
+        elem.classList.add('asc', 'inactive');
+    });
+}
+
+function toggleSortStates(elem) {
+    //if active, toggle between asc and desc
+    if (elem.classList.contains('active')) {
+        elem.classList.toggle('asc');
+        elem.classList.toggle('desc');
+    }
+
+    //if inactive, reset all other functions and add ascending active
+    if (elem.classList.contains('inactive')) {
+        resetSortHeaders();
+        elem.classList.remove('inactive');
+        elem.classList.add('active');
+    }
+}
+
+function isAllRowsHidden(value) {
+    return value.hidden == false;
+}
+
+function filterTable(elem) { // eslint-disable-line no-unused-vars
+    const outcomeAtt = 'data-test-result';
+    const outcome = elem.getAttribute(outcomeAtt);
+    const classOutcome = outcome + ' results-table-row';
+    const outcomeRows = document.getElementsByClassName(classOutcome);
+
+    for(let i = 0; i < outcomeRows.length; i++){
+        outcomeRows[i].hidden = !elem.checked;
+    }
+
+    const rows = findAll('.results-table-row').filter(isAllRowsHidden);
+    const allRowsHidden = rows.length == 0 ? true : false;
+    const notFoundMessage = document.getElementById('not-found-message');
+    notFoundMessage.hidden = !allRowsHidden;
+}
+</script>
+    <h1>report.html</h1>
+    <p>Report generated on 20-Jun-2023 at 13:37:43 by <a href="https://pypi.python.org/pypi/pytest-html">pytest-html</a> v3.2.0</p>
+    <h2>Summary</h2>
+    <p>4 tests ran in 8.49 seconds. </p>
+    <p class="filter" hidden="true">(Un)check the boxes to filter the results.</p><input checked="true" class="filter" data-test-result="passed" hidden="true" name="filter_checkbox" onChange="filterTable(this)" type="checkbox"/><span class="passed">3 passed</span>, <input checked="true" class="filter" data-test-result="skipped" disabled="true" hidden="true" name="filter_checkbox" onChange="filterTable(this)" type="checkbox"/><span class="skipped">0 skipped</span>, <input checked="true" class="filter" data-test-result="failed" hidden="true" name="filter_checkbox" onChange="filterTable(this)" type="checkbox"/><span class="failed">1 failed</span>, <input checked="true" class="filter" data-test-result="error" disabled="true" hidden="true" name="filter_checkbox" onChange="filterTable(this)" type="checkbox"/><span class="error">0 errors</span>, <input checked="true" class="filter" data-test-result="xfailed" disabled="true" hidden="true" name="filter_checkbox" onChange="filterTable(this)" type="checkbox"/><span class="xfailed">0 expected failures</span>, <input checked="true" class="filter" data-test-result="xpassed" disabled="true" hidden="true" name="filter_checkbox" onChange="filterTable(this)" type="checkbox"/><span class="xpassed">0 unexpected passes</span>
+    <h2>Results</h2>
+    <table id="results-table">
+      <thead id="results-table-head">
+        <tr>
+          <th class="sortable result initial-sort" col="result">Result</th>
+          <th class="sortable" col="name">Test</th>
+          <th class="sortable" col="duration">Duration</th>
+          <th class="sortable links" col="links">Links</th></tr>
+        <tr hidden="true" id="not-found-message">
+          <th colspan="4">No results found. Try to check the filters</th></tr></thead>
+      <tbody class="failed results-table-row">
+        <tr>
+          <td class="col-result">Failed</td>
+          <td class="col-name">tests.py::test_made_to_fail</td>
+          <td class="col-duration">1.11</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log">cls = &lt;class &#x27;_pytest.runner.CallInfo&#x27;&gt;<br/>func = &lt;function call_runtest_hook.&lt;locals&gt;.&lt;lambda&gt; at 0x1067edbc0&gt;<br/>when = &#x27;call&#x27;<br/>reraise = (&lt;class &#x27;_pytest.outcomes.Exit&#x27;&gt;, &lt;class &#x27;KeyboardInterrupt&#x27;&gt;)<br/><br/>    @classmethod<br/>    def from_call(<br/>        cls,<br/>        func: &quot;Callable[[], TResult]&quot;,<br/>        when: &quot;Literal[&#x27;collect&#x27;, &#x27;setup&#x27;, &#x27;call&#x27;, &#x27;teardown&#x27;]&quot;,<br/>        reraise: Optional[<br/>            Union[Type[BaseException], Tuple[Type[BaseException], ...]]<br/>        ] = None,<br/>    ) -&gt; &quot;CallInfo[TResult]&quot;:<br/>        &quot;&quot;&quot;Call func, wrapping the result in a CallInfo.<br/>    <br/>        :param func:<br/>            The function to call. Called without arguments.<br/>        :param when:<br/>            The phase in which the function is called.<br/>        :param reraise:<br/>            Exception or exceptions that shall propagate if raised by the<br/>            function, instead of being wrapped in the CallInfo.<br/>        &quot;&quot;&quot;<br/>        excinfo = None<br/>        start = timing.time()<br/>        precise_start = timing.perf_counter()<br/>        try:<br/>&gt;           result: Optional[TResult] = func()<br/><br/>../../../.pyenv/versions/General/lib/python3.11/site-packages/_pytest/runner.py:341: <br/>_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ <br/><br/>&gt;       lambda: ihook(item=item, **kwds), when=when, reraise=reraise<br/>    )<br/><br/>../../../.pyenv/versions/General/lib/python3.11/site-packages/_pytest/runner.py:262: <br/>_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ <br/><br/>self = &lt;_HookCaller &#x27;pytest_runtest_call&#x27;&gt;, args = ()<br/>kwargs = {&#x27;item&#x27;: &lt;Function test_made_to_fail&gt;}, argname = &#x27;item&#x27;<br/>firstresult = False<br/><br/>    def __call__(self, *args, **kwargs):<br/>        if args:<br/>            raise TypeError(&quot;hook calling supports only keyword arguments&quot;)<br/>        assert not self.is_historic()<br/>    <br/>        # This is written to avoid expensive operations when not needed.<br/>        if self.spec:<br/>            for argname in self.spec.argnames:<br/>                if argname not in kwargs:<br/>                    notincall = tuple(set(self.spec.argnames) - kwargs.keys())<br/>                    warnings.warn(<br/>                        &quot;Argument(s) {} which are declared in the hookspec &quot;<br/>                        &quot;can not be found in this hook call&quot;.format(notincall),<br/>                        stacklevel=2,<br/>                    )<br/>                    break<br/>    <br/>            firstresult = self.spec.opts.get(&quot;firstresult&quot;)<br/>        else:<br/>            firstresult = False<br/>    <br/>&gt;       return self._hookexec(self.name, self.get_hookimpls(), kwargs, firstresult)<br/><br/>../../../.pyenv/versions/General/lib/python3.11/site-packages/pluggy/_hooks.py:265: <br/>_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ <br/><br/>self = &lt;_pytest.config.PytestPluginManager object at 0x1060371d0&gt;<br/>hook_name = &#x27;pytest_runtest_call&#x27;<br/>methods = [&lt;HookImpl plugin_name=&#x27;runner&#x27;, plugin=&lt;module &#x27;_pytest.runner&#x27; from &#x27;/Users/sebastiancampos/.pyenv/versions/General/...ption&#x27; from &#x27;/Users/sebastiancampos/.pyenv/versions/General/lib/python3.11/site-packages/_pytest/threadexception.py&#x27;&gt;&gt;]<br/>kwargs = {&#x27;item&#x27;: &lt;Function test_made_to_fail&gt;}, firstresult = False<br/><br/>    def _hookexec(self, hook_name, methods, kwargs, firstresult):<br/>        # called from all hookcaller instances.<br/>        # enable_tracing will set its own wrapping function at self._inner_hookexec<br/>&gt;       return self._inner_hookexec(hook_name, methods, kwargs, firstresult)<br/><br/>../../../.pyenv/versions/General/lib/python3.11/site-packages/pluggy/_manager.py:80: <br/>_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ <br/><br/>hook_name = &#x27;pytest_runtest_call&#x27;<br/>hook_impls = [&lt;HookImpl plugin_name=&#x27;runner&#x27;, plugin=&lt;module &#x27;_pytest.runner&#x27; from &#x27;/Users/sebastiancampos/.pyenv/versions/General/...ption&#x27; from &#x27;/Users/sebastiancampos/.pyenv/versions/General/lib/python3.11/site-packages/_pytest/threadexception.py&#x27;&gt;&gt;]<br/>caller_kwargs = {&#x27;item&#x27;: &lt;Function test_made_to_fail&gt;}, firstresult = False<br/><br/>    def _multicall(hook_name, hook_impls, caller_kwargs, firstresult):<br/>        &quot;&quot;&quot;Execute a call into multiple python functions/methods and return the<br/>        result(s).<br/>    <br/>        ``caller_kwargs`` comes from _HookCaller.__call__().<br/>        &quot;&quot;&quot;<br/>        __tracebackhide__ = True<br/>        results = []<br/>        excinfo = None<br/>        try:  # run impl and wrapper setup functions in a loop<br/>            teardowns = []<br/>            try:<br/>                for hook_impl in reversed(hook_impls):<br/>                    try:<br/>                        args = [caller_kwargs[argname] for argname in hook_impl.argnames]<br/>                    except KeyError:<br/>                        for argname in hook_impl.argnames:<br/>                            if argname not in caller_kwargs:<br/>                                raise HookCallError(<br/>                                    f&quot;hook call must provide argument {argname!r}&quot;<br/>                                )<br/>    <br/>                    if hook_impl.hookwrapper:<br/>                        try:<br/>                            gen = hook_impl.function(*args)<br/>                            next(gen)  # first yield<br/>                            teardowns.append(gen)<br/>                        except StopIteration:<br/>                            _raise_wrapfail(gen, &quot;did not yield&quot;)<br/>                    else:<br/>                        res = hook_impl.function(*args)<br/>                        if res is not None:<br/>                            results.append(res)<br/>                            if firstresult:  # halt further impl calls<br/>                                break<br/>            except BaseException:<br/>                excinfo = sys.exc_info()<br/>        finally:<br/>            if firstresult:  # first result hooks return a single value<br/>                outcome = _Result(results[0] if results else None, excinfo)<br/>            else:<br/>                outcome = _Result(results, excinfo)<br/>    <br/>            # run all wrapper post-yield blocks<br/>            for gen in reversed(teardowns):<br/>                try:<br/>                    gen.send(outcome)<br/>                    _raise_wrapfail(gen, &quot;has second yield&quot;)<br/>                except StopIteration:<br/>                    pass<br/>    <br/>&gt;           return outcome.get_result()<br/><br/>../../../.pyenv/versions/General/lib/python3.11/site-packages/pluggy/_callers.py:60: <br/>_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ <br/><br/>self = &lt;pluggy._result._Result object at 0x106ebc510&gt;<br/><br/>    def get_result(self):<br/>        &quot;&quot;&quot;Get the result(s) for this hook call.<br/>    <br/>        If the hook was marked as a ``firstresult`` only a single value<br/>        will be returned otherwise a list of results.<br/>        &quot;&quot;&quot;<br/>        __tracebackhide__ = True<br/>        if self._excinfo is None:<br/>            return self._result<br/>        else:<br/>            ex = self._excinfo<br/>&gt;           raise ex[1].with_traceback(ex[2])<br/><br/>../../../.pyenv/versions/General/lib/python3.11/site-packages/pluggy/_result.py:60: <br/>_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ <br/><br/>hook_name = &#x27;pytest_runtest_call&#x27;<br/>hook_impls = [&lt;HookImpl plugin_name=&#x27;runner&#x27;, plugin=&lt;module &#x27;_pytest.runner&#x27; from &#x27;/Users/sebastiancampos/.pyenv/versions/General/...ption&#x27; from &#x27;/Users/sebastiancampos/.pyenv/versions/General/lib/python3.11/site-packages/_pytest/threadexception.py&#x27;&gt;&gt;]<br/>caller_kwargs = {&#x27;item&#x27;: &lt;Function test_made_to_fail&gt;}, firstresult = False<br/><br/>    def _multicall(hook_name, hook_impls, caller_kwargs, firstresult):<br/>        &quot;&quot;&quot;Execute a call into multiple python functions/methods and return the<br/>        result(s).<br/>    <br/>        ``caller_kwargs`` comes from _HookCaller.__call__().<br/>        &quot;&quot;&quot;<br/>        __tracebackhide__ = True<br/>        results = []<br/>        excinfo = None<br/>        try:  # run impl and wrapper setup functions in a loop<br/>            teardowns = []<br/>            try:<br/>                for hook_impl in reversed(hook_impls):<br/>                    try:<br/>                        args = [caller_kwargs[argname] for argname in hook_impl.argnames]<br/>                    except KeyError:<br/>                        for argname in hook_impl.argnames:<br/>                            if argname not in caller_kwargs:<br/>                                raise HookCallError(<br/>                                    f&quot;hook call must provide argument {argname!r}&quot;<br/>                                )<br/>    <br/>                    if hook_impl.hookwrapper:<br/>                        try:<br/>                            gen = hook_impl.function(*args)<br/>                            next(gen)  # first yield<br/>                            teardowns.append(gen)<br/>                        except StopIteration:<br/>                            _raise_wrapfail(gen, &quot;did not yield&quot;)<br/>                    else:<br/>&gt;                       res = hook_impl.function(*args)<br/><br/>../../../.pyenv/versions/General/lib/python3.11/site-packages/pluggy/_callers.py:39: <br/>_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ <br/><br/>item = &lt;Function test_made_to_fail&gt;<br/><br/>    def pytest_runtest_call(item: Item) -&gt; None:<br/>        _update_current_test_var(item, &quot;call&quot;)<br/>        try:<br/>            del sys.last_type<br/>            del sys.last_value<br/>            del sys.last_traceback<br/>        except AttributeError:<br/>            pass<br/>        try:<br/>            item.runtest()<br/>        except Exception as e:<br/>            # Store trace info to allow postmortem debugging<br/>            sys.last_type = type(e)<br/>            sys.last_value = e<br/>            assert e.__traceback__ is not None<br/>            # Skip *this* frame<br/>            sys.last_traceback = e.__traceback__.tb_next<br/>&gt;           raise e<br/><br/>../../../.pyenv/versions/General/lib/python3.11/site-packages/_pytest/runner.py:177: <br/>_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ <br/><br/>item = &lt;Function test_made_to_fail&gt;<br/><br/>    def pytest_runtest_call(item: Item) -&gt; None:<br/>        _update_current_test_var(item, &quot;call&quot;)<br/>        try:<br/>            del sys.last_type<br/>            del sys.last_value<br/>            del sys.last_traceback<br/>        except AttributeError:<br/>            pass<br/>        try:<br/>&gt;           item.runtest()<br/><br/>../../../.pyenv/versions/General/lib/python3.11/site-packages/_pytest/runner.py:169: <br/>_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ <br/><br/>self = &lt;Function test_made_to_fail&gt;<br/><br/>    def runtest(self) -&gt; None:<br/>        &quot;&quot;&quot;Execute the underlying test function.&quot;&quot;&quot;<br/>&gt;       self.ihook.pytest_pyfunc_call(pyfuncitem=self)<br/><br/>../../../.pyenv/versions/General/lib/python3.11/site-packages/_pytest/python.py:1799: <br/>_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ <br/><br/>self = &lt;_HookCaller &#x27;pytest_pyfunc_call&#x27;&gt;, args = ()<br/>kwargs = {&#x27;pyfuncitem&#x27;: &lt;Function test_made_to_fail&gt;}, argname = &#x27;pyfuncitem&#x27;<br/>firstresult = True<br/><br/>    def __call__(self, *args, **kwargs):<br/>        if args:<br/>            raise TypeError(&quot;hook calling supports only keyword arguments&quot;)<br/>        assert not self.is_historic()<br/>    <br/>        # This is written to avoid expensive operations when not needed.<br/>        if self.spec:<br/>            for argname in self.spec.argnames:<br/>                if argname not in kwargs:<br/>                    notincall = tuple(set(self.spec.argnames) - kwargs.keys())<br/>                    warnings.warn(<br/>                        &quot;Argument(s) {} which are declared in the hookspec &quot;<br/>                        &quot;can not be found in this hook call&quot;.format(notincall),<br/>                        stacklevel=2,<br/>                    )<br/>                    break<br/>    <br/>            firstresult = self.spec.opts.get(&quot;firstresult&quot;)<br/>        else:<br/>            firstresult = False<br/>    <br/>&gt;       return self._hookexec(self.name, self.get_hookimpls(), kwargs, firstresult)<br/><br/>../../../.pyenv/versions/General/lib/python3.11/site-packages/pluggy/_hooks.py:265: <br/>_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ <br/><br/>self = &lt;_pytest.config.PytestPluginManager object at 0x1060371d0&gt;<br/>hook_name = &#x27;pytest_pyfunc_call&#x27;<br/>methods = [&lt;HookImpl plugin_name=&#x27;python&#x27;, plugin=&lt;module &#x27;_pytest.python&#x27; from &#x27;/Users/sebastiancampos/.pyenv/versions/General/...st_plugin&#x27; from &#x27;/Users/sebastiancampos/.pyenv/versions/General/lib/python3.11/site-packages/anyio/pytest_plugin.py&#x27;&gt;&gt;]<br/>kwargs = {&#x27;pyfuncitem&#x27;: &lt;Function test_made_to_fail&gt;}, firstresult = True<br/><br/>    def _hookexec(self, hook_name, methods, kwargs, firstresult):<br/>        # called from all hookcaller instances.<br/>        # enable_tracing will set its own wrapping function at self._inner_hookexec<br/>&gt;       return self._inner_hookexec(hook_name, methods, kwargs, firstresult)<br/><br/>../../../.pyenv/versions/General/lib/python3.11/site-packages/pluggy/_manager.py:80: <br/>_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ <br/><br/>hook_name = &#x27;pytest_pyfunc_call&#x27;<br/>hook_impls = [&lt;HookImpl plugin_name=&#x27;python&#x27;, plugin=&lt;module &#x27;_pytest.python&#x27; from &#x27;/Users/sebastiancampos/.pyenv/versions/General/...st_plugin&#x27; from &#x27;/Users/sebastiancampos/.pyenv/versions/General/lib/python3.11/site-packages/anyio/pytest_plugin.py&#x27;&gt;&gt;]<br/>caller_kwargs = {&#x27;pyfuncitem&#x27;: &lt;Function test_made_to_fail&gt;}, firstresult = True<br/><br/>    def _multicall(hook_name, hook_impls, caller_kwargs, firstresult):<br/>        &quot;&quot;&quot;Execute a call into multiple python functions/methods and return the<br/>        result(s).<br/>    <br/>        ``caller_kwargs`` comes from _HookCaller.__call__().<br/>        &quot;&quot;&quot;<br/>        __tracebackhide__ = True<br/>        results = []<br/>        excinfo = None<br/>        try:  # run impl and wrapper setup functions in a loop<br/>            teardowns = []<br/>            try:<br/>                for hook_impl in reversed(hook_impls):<br/>                    try:<br/>                        args = [caller_kwargs[argname] for argname in hook_impl.argnames]<br/>                    except KeyError:<br/>                        for argname in hook_impl.argnames:<br/>                            if argname not in caller_kwargs:<br/>                                raise HookCallError(<br/>                                    f&quot;hook call must provide argument {argname!r}&quot;<br/>                                )<br/>    <br/>                    if hook_impl.hookwrapper:<br/>                        try:<br/>                            gen = hook_impl.function(*args)<br/>                            next(gen)  # first yield<br/>                            teardowns.append(gen)<br/>                        except StopIteration:<br/>                            _raise_wrapfail(gen, &quot;did not yield&quot;)<br/>                    else:<br/>                        res = hook_impl.function(*args)<br/>                        if res is not None:<br/>                            results.append(res)<br/>                            if firstresult:  # halt further impl calls<br/>                                break<br/>            except BaseException:<br/>                excinfo = sys.exc_info()<br/>        finally:<br/>            if firstresult:  # first result hooks return a single value<br/>                outcome = _Result(results[0] if results else None, excinfo)<br/>            else:<br/>                outcome = _Result(results, excinfo)<br/>    <br/>            # run all wrapper post-yield blocks<br/>            for gen in reversed(teardowns):<br/>                try:<br/>                    gen.send(outcome)<br/>                    _raise_wrapfail(gen, &quot;has second yield&quot;)<br/>                except StopIteration:<br/>                    pass<br/>    <br/>&gt;           return outcome.get_result()<br/><br/>../../../.pyenv/versions/General/lib/python3.11/site-packages/pluggy/_callers.py:60: <br/>_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ <br/><br/>self = &lt;pluggy._result._Result object at 0x106eaff50&gt;<br/><br/>    def get_result(self):<br/>        &quot;&quot;&quot;Get the result(s) for this hook call.<br/>    <br/>        If the hook was marked as a ``firstresult`` only a single value<br/>        will be returned otherwise a list of results.<br/>        &quot;&quot;&quot;<br/>        __tracebackhide__ = True<br/>        if self._excinfo is None:<br/>            return self._result<br/>        else:<br/>            ex = self._excinfo<br/>&gt;           raise ex[1].with_traceback(ex[2])<br/><br/>../../../.pyenv/versions/General/lib/python3.11/site-packages/pluggy/_result.py:60: <br/>_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ <br/><br/>hook_name = &#x27;pytest_pyfunc_call&#x27;<br/>hook_impls = [&lt;HookImpl plugin_name=&#x27;python&#x27;, plugin=&lt;module &#x27;_pytest.python&#x27; from &#x27;/Users/sebastiancampos/.pyenv/versions/General/...st_plugin&#x27; from &#x27;/Users/sebastiancampos/.pyenv/versions/General/lib/python3.11/site-packages/anyio/pytest_plugin.py&#x27;&gt;&gt;]<br/>caller_kwargs = {&#x27;pyfuncitem&#x27;: &lt;Function test_made_to_fail&gt;}, firstresult = True<br/><br/>    def _multicall(hook_name, hook_impls, caller_kwargs, firstresult):<br/>        &quot;&quot;&quot;Execute a call into multiple python functions/methods and return the<br/>        result(s).<br/>    <br/>        ``caller_kwargs`` comes from _HookCaller.__call__().<br/>        &quot;&quot;&quot;<br/>        __tracebackhide__ = True<br/>        results = []<br/>        excinfo = None<br/>        try:  # run impl and wrapper setup functions in a loop<br/>            teardowns = []<br/>            try:<br/>                for hook_impl in reversed(hook_impls):<br/>                    try:<br/>                        args = [caller_kwargs[argname] for argname in hook_impl.argnames]<br/>                    except KeyError:<br/>                        for argname in hook_impl.argnames:<br/>                            if argname not in caller_kwargs:<br/>                                raise HookCallError(<br/>                                    f&quot;hook call must provide argument {argname!r}&quot;<br/>                                )<br/>    <br/>                    if hook_impl.hookwrapper:<br/>                        try:<br/>                            gen = hook_impl.function(*args)<br/>                            next(gen)  # first yield<br/>                            teardowns.append(gen)<br/>                        except StopIteration:<br/>                            _raise_wrapfail(gen, &quot;did not yield&quot;)<br/>                    else:<br/>&gt;                       res = hook_impl.function(*args)<br/><br/>../../../.pyenv/versions/General/lib/python3.11/site-packages/pluggy/_callers.py:39: <br/>_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ <br/><br/>pyfuncitem = &lt;Function test_made_to_fail&gt;<br/><br/>    @hookimpl(trylast=True)<br/>    def pytest_pyfunc_call(pyfuncitem: &quot;Function&quot;) -&gt; Optional[object]:<br/>        testfunction = pyfuncitem.obj<br/>        if is_async_function(testfunction):<br/>            async_warn_and_skip(pyfuncitem.nodeid)<br/>        funcargs = pyfuncitem.funcargs<br/>        testargs = {arg: funcargs[arg] for arg in pyfuncitem._fixtureinfo.argnames}<br/>&gt;       result = testfunction(**testargs)<br/><br/>../../../.pyenv/versions/General/lib/python3.11/site-packages/_pytest/python.py:194: <br/>_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ <br/><br/>headless = True, capture_screenshot = True<br/><br/>    def _call_with_driver(headless=False, capture_screenshot=False):<br/>        params = signature(func).parameters<br/>        if params.get(&#x27;headless&#x27;):<br/>            headless = params.get(&#x27;headless&#x27;).default<br/>        if params.get(&#x27;capture_screenshot&#x27;):<br/>            capture_screenshot = params.get(&#x27;capture_screenshot&#x27;).default<br/>        driver = BasicSeleniumDriver(headless=headless)<br/>        try:<br/>            passed = func(driver)<br/>        except Exception as e:<br/>             passed = False<br/>        if capture_screenshot:<br/>            driver.save_screenshot(func.__name__ + f&quot;{datetime.datetime.now()}.png&quot;)<br/>        driver.quit()<br/>        if passed:<br/>            logger.info(f&#x27;{func.__name__} [PASSED]&#x27;)<br/>        else:<br/>            logger.error(f&#x27;{func.__name__} [FAILED]&#x27;)<br/>&gt;       assert passed<br/><span class="error">E       AssertionError</span><br/><br/>../BasicWebDriver/MyWebDriver.py:78: AssertionError<br/> ------------------------------Captured stderr call------------------------------ <br/>2023-06-20 13:37:43,368 - test-suite - ERROR - test_made_to_fail [FAILED]
+<br/> -------------------------------Captured log call-------------------------------- <br/>ERROR    test-suite:MyWebDriver.py:77 test_made_to_fail [FAILED]<br/></div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">tests.py::test_launch_driver</td>
+          <td class="col-duration">1.49</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="empty log">No log output captured.</div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">tests.py::test_jira_invalid_login</td>
+          <td class="col-duration">2.99</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log"> ------------------------------Captured stderr call------------------------------ <br/>2023-06-20 13:37:38,585 - test-suite - DEBUG - Searching for element &#x27;//input[@name=&quot;username&quot;]&#x27;
+2023-06-20 13:37:38,737 - test-suite - DEBUG - Searching for element &#x27;//button[@id=&quot;login-submit&quot;]&#x27;
+2023-06-20 13:37:38,772 - test-suite - DEBUG - Searching for element &#x27;//button[@id=&quot;signup-submit&quot;]&#x27;
+2023-06-20 13:37:39,498 - test-suite - INFO - test_jira_invalid_login [PASSED]
+<br/> -------------------------------Captured log call-------------------------------- <br/>DEBUG    test-suite:MyWebDriver.py:34 Searching for element &#x27;//input[@name=&quot;username&quot;]&#x27;
+DEBUG    test-suite:MyWebDriver.py:34 Searching for element &#x27;//button[@id=&quot;login-submit&quot;]&#x27;
+DEBUG    test-suite:MyWebDriver.py:34 Searching for element &#x27;//button[@id=&quot;signup-submit&quot;]&#x27;
+INFO     test-suite:MyWebDriver.py:75 test_jira_invalid_login [PASSED]<br/></div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">tests.py::test_jira_valid_login</td>
+          <td class="col-duration">2.75</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log"> ------------------------------Captured stderr call------------------------------ <br/>2023-06-20 13:37:41,393 - test-suite - DEBUG - Searching for element &#x27;//input[@name=&quot;username&quot;]&#x27;
+2023-06-20 13:37:41,522 - test-suite - DEBUG - Searching for element &#x27;//button[@id=&quot;login-submit&quot;]&#x27;
+2023-06-20 13:37:41,555 - test-suite - DEBUG - Searching for element &#x27;//button[@id=&#x27;social-login-submit&#x27;]//span[contains(text(), &#x27;Continue with Google&#x27;)]&#x27;
+2023-06-20 13:37:42,256 - test-suite - INFO - test_jira_valid_login [PASSED]
+<br/> -------------------------------Captured log call-------------------------------- <br/>DEBUG    test-suite:MyWebDriver.py:34 Searching for element &#x27;//input[@name=&quot;username&quot;]&#x27;
+DEBUG    test-suite:MyWebDriver.py:34 Searching for element &#x27;//button[@id=&quot;login-submit&quot;]&#x27;
+DEBUG    test-suite:MyWebDriver.py:34 Searching for element &#x27;//button[@id=&#x27;social-login-submit&#x27;]//span[contains(text(), &#x27;Continue with Google&#x27;)]&#x27;
+INFO     test-suite:MyWebDriver.py:75 test_jira_valid_login [PASSED]<br/></div></td></tr></tbody></table></body></html>
